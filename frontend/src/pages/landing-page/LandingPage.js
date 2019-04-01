@@ -1,10 +1,14 @@
 import React from 'react';
 
-const LandingPage = () => {
+import Page from 'components/Page';
+import SwitchTheme from 'components/SwitchTheme';
+
+const LandingPage = (props) => {
   return (
-    <div>
+    <Page>
       Landing Page
-    </div>
+      <SwitchTheme />
+    </Page>
   );
 }
 

@@ -1,10 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Page = () => {
+import Header from './Header';
+import Footer from './Footer';
+
+const XPage = styled.div`
+  background-color: ${props => props.theme.BL100};
+`;
+
+const Page = ({ children }) => {
   return (
-    <div>
-      Page
-    </div>
+    <XPage>
+      <Header />
+      { children }
+      <Footer />
+    </XPage>
   );
 }
 
