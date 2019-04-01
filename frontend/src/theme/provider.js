@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import colors from './colors';
+import properties from './properties';
 
 export const ThemeContext = React.createContext();
 
 const ThemeProvider = ({ children }) => {
-  const [ theme, setTheme ] = useState(colors.light);
+  const [ theme, setTheme ] = useState(properties.light);
 
   const toggleTheme = () => {
-    theme === colors.light
-      ? setTheme(colors.dark)
-      : setTheme(colors.light);
+    theme === properties.light
+      ? setTheme(properties.dark)
+      : setTheme(properties.light);
   }
 
   return (

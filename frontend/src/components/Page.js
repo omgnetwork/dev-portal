@@ -5,14 +5,24 @@ import Header from './Header';
 import Footer from './Footer';
 
 const XPage = styled.div`
-  background-color: ${props => props.theme.BL100};
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .page-child {
+    flex: 1 1 auto;
+  }
 `;
 
 const Page = ({ children }) => {
   return (
     <XPage>
       <Header />
-      { children }
+
+      <div className='page-child'>
+        { children }
+      </div>
+
       <Footer />
     </XPage>
   );

@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Page from 'components/Page';
-import SwitchTheme from 'components/SwitchTheme';
+import Carousel from 'components/Carousel';
 
-const LandingPage = (props) => {
+const LandingPage = () => {
   return (
     <Page>
+      <Carousel />
       Landing Page
-      <SwitchTheme />
     </Page>
   );
 }

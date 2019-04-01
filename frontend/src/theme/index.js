@@ -4,9 +4,11 @@ import { createGlobalStyle, ThemeProvider as StyledThemeProvider } from 'styled-
 import ThemeProvider, { ThemeContext } from './provider';
 
 const XGlobalStyle = createGlobalStyle`
+  html,
   body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
   }
 `;
 
