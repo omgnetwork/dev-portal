@@ -9,8 +9,8 @@ const light = {
   success: '#0fbf99',
   warning: '#fb7166',
 
-  pageWidth: '900px',
-  contentWidth: '700px',
+  pageWidth: '1000px',
+  contentWidth: '800px',
   boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.10)',
   borderRadius: '5px',
   mobileBreak: '(max-width: 600px)',

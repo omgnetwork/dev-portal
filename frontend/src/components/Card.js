@@ -7,7 +7,7 @@ const XCard = styled.div`
   flex: 1 1 auto;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 0 0.5rem;
   border: 2px solid ${props => props.theme.secondary};
   border-radius: ${props => props.theme.borderRadius};

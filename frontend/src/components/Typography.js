@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const XTypography = styled.div`
   font-size: ${props => props.size};
   font-weight: ${props => props.bold ? 'bold' : 'inherit'};
+  text-align: ${props => props.center ? 'center' : 'inherit'};
   white-space: pre-line;
   color: ${props => props.color
     ? props.theme[props.color]
@@ -16,7 +17,14 @@ const XTypography = styled.div`
   }
 `;
 
-const Typography = ({ children, bold, size, color, className }) => {
+const Typography = ({
+  children,
+  bold,
+  size,
+  color,
+  className,
+  center
+}) => {
   const getSize = (_size = 'medium') => {
     switch(_size) {
       case 'S':
@@ -36,6 +44,7 @@ const Typography = ({ children, bold, size, color, className }) => {
       size={getSize(size)}
       color={color}
       className={className}
+      center={center}
     >
       {children}
     </XTypography>
@@ -46,6 +55,7 @@ Typography.propTypes = {
   bold: PropTypes.bool,
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
+  center: PropTypes.bool,
   size: PropTypes.oneOf(['S', 'M', 'L', 'XL'])
 }
 

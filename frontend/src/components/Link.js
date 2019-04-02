@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const XLink = styled.a`
   text-decoration: none;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme[props.color] || props.theme.text};
   transition: color 200ms ease-in-out;
 
   :hover {
@@ -13,7 +13,7 @@ const XLink = styled.a`
   }
 `;
 
-const Link = ({ href, to, children }) => {
+const Link = ({ href, to, children, color }) => {
   if (to) {
     return (
       <RouterLink to={to}>
@@ -23,7 +23,7 @@ const Link = ({ href, to, children }) => {
   }
 
   return (
-    <XLink href={href} target="_blank">
+    <XLink href={href} target="_blank" color={color}>
       {children}
     </XLink>
   );
@@ -33,6 +33,7 @@ Link.propTypes = {
   href: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.node.isRequired,
+  color: PropTypes.string
 }
 
 export default Link;
