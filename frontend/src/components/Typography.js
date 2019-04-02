@@ -29,6 +29,8 @@ const Typography = ({
     switch(_size) {
       case 'S':
         return '0.8rem';
+      case 'XS':
+        return '0.6rem';
       case 'L':
         return '1.5rem';
       case 'XL':
