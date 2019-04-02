@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Hamburger from 'components/Hamburger';
 import Link from './Link';
 
 const XHeader = styled.div`
@@ -53,14 +54,6 @@ const XHeader = styled.div`
     transform: translateY(8px);
   }
 `;
-
-const Hamburger = () => {
-  return (
-    <div>
-      Hamburger
-    </div>
-  );
-}
 
 const Header = () => {
   return (
