@@ -39,7 +39,7 @@ const Carousel = () => {
           {`Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees`}
         </Typography>
 
-        <Button>
+        <Button href="">
           Get Started
         </Button>
       </div>

@@ -10,7 +10,7 @@ const XFooter = styled.div`
   color: ${props => props.theme.background};
 
   .footer-content {
-    max-width: ${props => props.theme.pageWidth};
+    max-width: ${props => props.theme.contentWidth};
     flex: 1 1 auto;
   }
 `;
