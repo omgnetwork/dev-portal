@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-const XHamburger = styled.div``;
 
 const XLine = styled.div`
   height: 3px;
@@ -10,32 +8,25 @@ const XLine = styled.div`
   margin-bottom: 5px;
   transition: all 250ms ease-in-out;
 `;
-
 const XLine1 = styled(XLine)`
   transform-origin: top left;
-  transform: ${props => props.isOpen ? 'rotate(33deg)' : 'initial'};
+  transform: ${props => props.isOpen ? 'rotate(45deg) translateY(-3px)' : 'initial'};
 `;
 const XLine2 = styled(XLine)`
   opacity: ${props => props.isOpen ? 0 : 1};
 `;
 const XLine3 = styled(XLine)`
   transform-origin: bottom left;
-  transform: ${props => props.isOpen ? 'rotate(-33deg)' : 'initial'};
+  transform: ${props => props.isOpen ? 'rotate(-45deg) translateY(4px)' : 'initial'};
 `;
 
-const Hamburger = () => {
-  const [ isOpen, setIsOpen ] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  }
-
+const Hamburger = ({ hamburgerClick, isOpen }) => {
   return (
-    <XHamburger onClick={handleClick}>
+    <div onClick={hamburgerClick}>
       <XLine1 isOpen={isOpen}/>
       <XLine2 isOpen={isOpen}/>
       <XLine3 isOpen={isOpen}/>
-    </XHamburger>
+    </div>
   );
 }
 

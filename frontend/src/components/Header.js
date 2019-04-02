@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import styled from 'styled-components';
 
-import Hamburger from 'components/Hamburger';
+import Hamburger from './Hamburger';
+import Dropdown from './Dropdown';
 import Link from './Link';
 
 const XHeader = styled.div`
@@ -13,6 +14,7 @@ const XHeader = styled.div`
   top: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 1;
   background-color: ${props => props.theme.background};
 
   .header-content {
@@ -55,7 +57,32 @@ const XHeader = styled.div`
   }
 `;
 
+const menuItems = [
+  {
+    title: 'Block Explorer',
+    href: ''
+  },
+  {
+    title: 'Release Notes',
+    href: ''
+  },
+  {
+    title: 'API',
+    href: ''
+  },
+  {
+    title: 'Documentation',
+    href: ''
+  },
+]
+
 const Header = () => {
+  const [ isOpen, setIsOpen ] = useState(false);
+
+  const hamburgerClick = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <XHeader>
       <div className="header-content">
@@ -66,25 +93,16 @@ const Header = () => {
         </div>
 
         <div className='header-desktop'>
-          <div className="header-link">
-            <Link href="">Block Explorer</Link>
-          </div>
-
-          <div className="header-link">
-            <Link href="">Release Notes</Link>
-          </div>
-
-          <div className="header-link">
-            <Link href="">API</Link>
-          </div>
-
-          <div className="header-link">
-            <Link href="">Documentation</Link>
-          </div>
+          {menuItems.map((item, index) => (
+            <div key={index} className="header-link">
+              <Link href={item.href}>{item.title}</Link>
+            </div>
+          ))}
         </div>
 
         <div className='header-mobile'>
-          <Hamburger />
+          <Hamburger isOpen={isOpen} hamburgerClick={hamburgerClick} />
+          <Dropdown isOpen={isOpen} hamburgerClick={hamburgerClick} menuItems={menuItems}/>
         </div>
       </div>
     </XHeader>

@@ -58,7 +58,7 @@ Typography.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   center: PropTypes.bool,
-  size: PropTypes.oneOf(['S', 'M', 'L', 'XL'])
+  size: PropTypes.oneOf(['XS', 'S', 'M', 'L', 'XL'])
 }
 
 export default Typography;

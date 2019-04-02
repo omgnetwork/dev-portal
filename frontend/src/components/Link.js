@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 
 const XLink = styled.a`
+  display: flex;
   text-decoration: none;
   color: ${props => props.theme[props.color] || props.theme.text};
   transition: color 200ms ease-in-out;

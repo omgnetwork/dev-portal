@@ -11,7 +11,7 @@ const light = {
 
   pageWidth: '1000px',
   contentWidth: '800px',
-  boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.10)',
+  boxShadow: '0px 10px 10px 0px rgba(0,0,0,0.10)',
   borderRadius: '5px',
   mobileBreak: '(max-width: 650px)',
   tabletBreak: '(max-width: 750px)',
