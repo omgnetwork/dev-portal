@@ -9,6 +9,9 @@ const XGlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 16px;
+
+    @import url('https://cdn.omise.co/fonts/circular.css?family=Circular');
+    font-family: 'Circular', sans-serif;
   }
 `;
 
