@@ -12,7 +12,7 @@ const XTypography = styled.div`
     : props.theme.dark
   };
 
-  @media ${props => props.theme.mobileBreak} {
+  @media ${props => props.theme.tabletBreak} {
     white-space: initial;
   }
 `;

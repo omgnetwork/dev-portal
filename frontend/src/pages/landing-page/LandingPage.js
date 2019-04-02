@@ -11,7 +11,7 @@ import Bookmark from 'components/Bookmark';
 
 const XLayout = styled.div`
   max-width: ${props => props.theme.contentWidth};
-  padding: 4rem 0;
+  padding: 4rem 1.5rem;
   margin: 0 auto;
 `;
 
@@ -24,6 +24,14 @@ const XCards = styled.div`
     display: flex;
     flex-direction: row;
     padding: 2rem 0 4rem 0;
+
+    @media ${props => props.theme.mobileBreak} {
+      flex-direction: column;
+
+      > div {
+        margin: 0 0 1rem 0;
+      }
+    }
   }
 `;
 
@@ -59,10 +67,18 @@ const XBookmarks = styled.div`
   display: flex;
   flex-direction: row;
 
+  @media ${props => props.theme.mobileBreak} {
+    flex-direction: column;
+  }
+
   .bookmark-column {
     flex: 1 1 50%;
     :last-child {
       margin-left: 6rem;
+
+      @media ${props => props.theme.mobileBreak} {
+        margin-left: 0;
+      }
     }
 
     .bookmark-intro {
@@ -76,6 +92,10 @@ const XCTA = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 4rem 0;
+
+  @media ${props => props.theme.mobileBreak} {
+    align-items: center;
+  }
 
   span {
     margin-left: auto;
@@ -211,7 +231,7 @@ const LandingPage = () => {
 
         <XCTA>
           <span>
-            <Typography bold size='XL'>
+            <Typography center bold size='XL'>
               Join the OmiseGO Developers Program
             </Typography>
           </span>

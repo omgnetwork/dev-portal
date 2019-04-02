@@ -8,26 +8,59 @@ const XHeader = styled.div`
   justify-content: center;
   padding: 1.3rem 1.5rem;
   box-shadow: ${props => props.theme.boxShadow};
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: ${props => props.theme.background};
 
   .header-content {
     max-width: ${props => props.theme.pageWidth};
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
+
+    @media ${props => props.theme.mobileBreak} {
+      justify-content: space-between;
+    }
+
+    .header-desktop {
+      display: flex;
+      flex-direction: row;
+
+      @media ${props => props.theme.mobileBreak} {
+        display: none;
+      }
+
+      .header-link {
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+      }
+    }
+
+    .header-mobile {
+      @media ${props => props.theme.isNotMobile} {
+        display: none;
+      }
+      display: flex;
+      align-items: center;
+    }
   }
 
   .header-logo {
     top: 6px;
     transform: translateY(8px);
   }
-
-  .header-link {
-    display: flex;
-    align-items: center;
-    padding-left: 2rem;
-  }
 `;
+
+const Hamburger = () => {
+  return (
+    <div>
+      Hamburger
+    </div>
+  );
+}
 
 const Header = () => {
   return (
@@ -39,23 +72,29 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="header-link">
-          <Link href="">Block Explorer</Link>
+        <div className='header-desktop'>
+          <div className="header-link">
+            <Link href="">Block Explorer</Link>
+          </div>
+
+          <div className="header-link">
+            <Link href="">Release Notes</Link>
+          </div>
+
+          <div className="header-link">
+            <Link href="">API</Link>
+          </div>
+
+          <div className="header-link">
+            <Link href="">Documentation</Link>
+          </div>
         </div>
 
-        <div className="header-link">
-          <Link href="">Release Notes</Link>
-        </div>
-
-        <div className="header-link">
-          <Link href="">API</Link>
-        </div>
-
-        <div className="header-link">
-          <Link href="">Documentation</Link>
+        <div className='header-mobile'>
+          <Hamburger />
         </div>
       </div>
-        </XHeader>
+    </XHeader>
   );
 }
 

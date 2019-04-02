@@ -11,6 +11,7 @@ const XPage = styled.div`
 
   .page-child {
     flex: 1 1 auto;
+    margin-top: 85px;
   }
 `;
 

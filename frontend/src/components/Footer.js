@@ -18,8 +18,21 @@ const XFooter = styled.div`
     display: flex;
     flex-direction: row;
 
+    @media ${props => props.theme.mobileBreak} {
+      flex-direction: column;
+    }
+
     .footer-column {
       flex: 1 1 0;
+      padding-right: 0.5rem;
+
+      @media ${props => props.theme.mobileBreak} {
+        padding: 0 0 2rem 0;
+      }
+
+      :last-child {
+        padding-right: 0;
+      }
 
       .footer-item {
         display: flex;
@@ -152,7 +165,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className='footer-column'>
+        <div className='footer-column' style={{ position: 'relative' }}>
           <span className='footer-item'>
             <Typography color='background' bold size='S'>
               Follow us
@@ -169,13 +182,9 @@ const Footer = () => {
             <Link href='#'>
               <img src={process.env.PUBLIC_URL + '/img/facebook.svg'} alt='facebook' className='social' />
             </Link>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
           </span>
 
-          <span className='footer-item'>
+          <span className='footer-item' style={{ position: 'absolute', bottom: 0 }}>
             <Typography color='text' size='XS'>
               {`© 2019 Omise.\nAll rights Reserved`}
             </Typography>

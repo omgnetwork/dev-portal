@@ -11,6 +11,10 @@ const XBookmark = styled.div`
   margin-bottom: 2rem;
   min-height: 8rem;
 
+  @media ${props => props.theme.mobileBreak} {
+    min-height: initial;
+  }
+
   .image {
     min-width: 50px;
     max-width: 50px;
