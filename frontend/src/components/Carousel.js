@@ -6,30 +6,6 @@ import { smoothScroll } from 'utils/scroll';
 import Button from 'components/Button';
 import Typography from 'components/Typography';
 
-const carouselContent = [
-  {
-    preTitle: 'OmiseGO Developer Portal',
-    title: 'Build Scalable Decentralized\nPayment Apps',
-    subTitle: 'Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees',
-    buttonTitle: 'Get Started',
-    href: ''
-  },
-  {
-    preTitle: 'OmiseGO Developer Portal',
-    title: 'Build Scalable Payment dApps',
-    subTitle: 'Plug into the OMG network to scale your decentralized\napplications while rooting',
-    buttonTitle: 'Get Started',
-    href: ''
-  },
-  {
-    preTitle: 'OmiseGO Developer Portal',
-    title: 'Build High Throughput\nPayment dApps',
-    subTitle: 'Integrate your decentralized application with the OMG network to\nachieve high throughput and and lower fees while maintaining strong\nsecurity of funds',
-    buttonTitle: 'Get Started',
-    href: ''
-  },
-];
-
 const XCarouselWrapper = styled.div`
   position: relative;
 `;
@@ -89,7 +65,7 @@ const XCarouselPagerItem = styled.div`
   }
 `;
 
-const Carousel = () => {
+const Carousel = ({ content }) => {
   const node = useRef();
   const [position, setPosition] = useState(0);
   const [width, setWidth] = useState();
@@ -113,7 +89,7 @@ const Carousel = () => {
   const gotoPosition = (newPosition) => {
     if (typeof(newPosition) === 'undefined') {
       const positionCandidate = position + 1;
-      newPosition = positionCandidate < carouselContent.length
+      newPosition = positionCandidate < content.length
         ? positionCandidate
         : 0
     }
@@ -127,17 +103,19 @@ const Carousel = () => {
   return (
     <XCarouselWrapper>
       <XCarouselContainer ref={node}>
-        <XCarouselPager>
-          {carouselContent.map((_, index) => (
-            <XCarouselPagerItem
-              key={index}
-              active={index === position}
-              onClick={() => gotoPosition(index)}
-            />
-          ))}
-        </XCarouselPager>
+        {content.length > 1 && (
+          <XCarouselPager>
+            {content.map((_, index) => (
+              <XCarouselPagerItem
+                key={index}
+                active={index === position}
+                onClick={() => gotoPosition(index)}
+              />
+            ))}
+          </XCarouselPager>
+        )}
 
-        {carouselContent.map((item, index) => (
+        {content.map((item, index) => (
           <XCarouselItem key={index}>
             <div className='carousel-content'>
               <Typography className='carousel-text' size='L'>

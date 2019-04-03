@@ -9,6 +9,30 @@ import Button from 'components/Button';
 import Divider from 'components/Divider';
 import Bookmark from 'components/Bookmark';
 
+const carouselContent = [
+  {
+    preTitle: 'OmiseGO Developer Portal',
+    title: 'Build Scalable Decentralized\nPayment Apps',
+    subTitle: 'Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees',
+    buttonTitle: 'Get Started',
+    href: ''
+  },
+  // {
+  //   preTitle: 'OmiseGO Developer Portal',
+  //   title: 'Build Scalable Payment dApps',
+  //   subTitle: 'Plug into the OMG network to scale your decentralized\napplications while rooting',
+  //   buttonTitle: 'Get Started',
+  //   href: ''
+  // },
+  // {
+  //   preTitle: 'OmiseGO Developer Portal',
+  //   title: 'Build High Throughput\nPayment dApps',
+  //   subTitle: 'Integrate your decentralized application with the OMG network to\nachieve high throughput and and lower fees while maintaining strong\nsecurity of funds',
+  //   buttonTitle: 'Get Started',
+  //   href: ''
+  // },
+];
+
 const XLayout = styled.div`
   max-width: ${props => props.theme.contentWidth};
   padding: 4rem 1.5rem;
@@ -111,8 +135,7 @@ const XCTA = styled.div`
 const LandingPage = () => {
   return (
     <Page>
-      <Carousel />
-      
+      <Carousel content={carouselContent} />
       <XLayout>
         <XCards>
           <Typography bold size='L'>
