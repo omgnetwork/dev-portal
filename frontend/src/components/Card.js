@@ -8,7 +8,6 @@ const XCard = styled.div`
   align-items: center;
   text-align: center;
   padding: 1.5rem;
-  margin: 0 0.5rem;
   border: 2px solid ${props => props.theme.secondary};
   border-radius: ${props => props.theme.borderRadius};
   cursor: pointer;
@@ -21,14 +20,6 @@ const XCard = styled.div`
   :active {
     transform: translateY(1px);
     box-shadow: none;
-  }
-
-  :first-child {
-    margin-left: 0;
-  }
-
-  :last-child {
-    margin-right: 0;
   }
 `;
 

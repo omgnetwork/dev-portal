@@ -53,11 +53,26 @@ const XCards = styled.div`
     flex-direction: row;
     padding: 2rem 0 4rem 0;
 
+    a {
+      flex: 1 1 100%;
+      :first-child {
+        margin-right: 10px;
+      }
+      :last-child {
+        margin-left: 10px;
+      }
+    }
+
     @media ${props => props.theme.mobileBreak} {
       flex-direction: column;
 
-      > div {
-        margin: 0 0 1rem 0;
+      a {
+        :first-child {
+          margin: 0 0 1rem 0;
+        }
+        :last-child {
+          margin: 1rem 0 0 0;
+        }
       }
     }
   }
