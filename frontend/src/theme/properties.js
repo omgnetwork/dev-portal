@@ -3,6 +3,8 @@ const light = {
   primary: '#1a57f0',
   secondary: '#f7f8fa',
   gray: '#edeef2',
+  mediumGray: '#d0d6e4',
+  darkGray: '#5a626f',
   background: '#ffffff',
   text: '#61646d',
   dark: '#03060b',
