@@ -95,12 +95,15 @@ const Carousel = () => {
   const [width, setWidth] = useState();
   
   useEffect(() => {
-    handleResize();
+    setWidth(node.current.clientWidth);
     window.addEventListener('resize', handleResize);
+    const carouselInterval = setInterval(gotoPosition, 5000);
+
     return () => {
       window.removeEventListener('resize', handleResize);
+      clearInterval(carouselInterval);
     }
-  }, []);
+  }, [width, position]);
   
   const handleResize = () => {
     setWidth(node.current.clientWidth);
@@ -108,7 +111,14 @@ const Carousel = () => {
   }
 
   const gotoPosition = (newPosition) => {
-    const amountToScroll = width * (newPosition - position);
+    if (typeof(newPosition) === 'undefined') {
+      const positionCandidate = position + 1;
+      newPosition = positionCandidate < carouselContent.length
+        ? positionCandidate
+        : 0
+    }
+
+    const amountToScroll = width * (newPosition - position);      
     smoothScroll(node, amountToScroll, 400);
     setPosition(newPosition);
   }
