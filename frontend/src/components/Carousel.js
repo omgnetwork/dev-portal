@@ -22,15 +22,39 @@ const XCarouselItem = styled.div`
   display: flex;
   flex: 1 0 100%;
   justify-content: center;
-  padding: 6rem 1.5rem;
+  padding: 6rem 1.5rem 0 1.5rem;
   background-color: ${props => props.theme.secondary};
+
+  @media (max-width: 910px) {
+    padding: 6rem 1.5rem;
+    .right {
+      display: none;
+    }
+  }
+
+  @media ${props => props.theme.mobileBreak} {
+    padding: 4rem 1.5rem;
+  }
 
   .carousel-content {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 1 auto;
+    flex-direction: row;
     max-width: ${props => props.theme.pageWidth};
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 auto;
+    }
+
+    .right {
+      width: 50%;
+      transform: translateY(-70px);
+      img {
+        width: 95%;
+      }
+    }
   }
 
   .carousel-content .carousel-text {
@@ -118,18 +142,24 @@ const Carousel = ({ content }) => {
         {content.map((item, index) => (
           <XCarouselItem key={index}>
             <div className='carousel-content'>
-              <Typography className='carousel-text' size='L'>
-                {item.preTitle}
-              </Typography>
-              <Typography className='carousel-text' size='XL' bold>
-                {item.title}
-              </Typography>
-              <Typography className='carousel-text' color='text'>
-                {item.subTitle}
-              </Typography>
-              <Button href={item.href}>
-                {item.buttonTitle}
-              </Button>
+              <div className='left'>
+                <Typography className='carousel-text' size='L'>
+                  {item.preTitle}
+                </Typography>
+                <Typography className='carousel-text' size='XL' bold>
+                  {item.title}
+                </Typography>
+                <Typography className='carousel-text' color='text'>
+                  {item.subTitle}
+                </Typography>
+                <Button href={item.href}>
+                  {item.buttonTitle}
+                </Button>
+              </div>
+
+              <div className='right'>
+                <img src={process.env.PUBLIC_URL + item.imagePath} />
+              </div>
             </div>
           </XCarouselItem>
         ))}

@@ -16,12 +16,9 @@ const XBookmark = styled.div`
   }
 
   .image {
-    min-width: 50px;
-    max-width: 50px;
-    height: 50px;
+    height: 60px;
     margin-right: 1rem;
     display: inline-block;
-    border: 1px solid black;
   }
 
   .content {
@@ -38,7 +35,7 @@ const XBookmark = styled.div`
 const Bookmark = ({ image, title, subTitle, action }) => {
   return (
     <XBookmark>
-      <img className='image' href={image} alt='bookmark'/>
+      <img className='image' src={image} alt='bookmark'/>
       <div className='content'>
         <span>
           <Typography bold>

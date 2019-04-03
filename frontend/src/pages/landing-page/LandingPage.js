@@ -15,6 +15,7 @@ const carouselContent = [
     title: 'Build Scalable Decentralized\nPayment Apps',
     subTitle: 'Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees',
     buttonTitle: 'Get Started',
+    imagePath: '/img/00-hero.png',
     href: ''
   },
   // {
@@ -22,6 +23,7 @@ const carouselContent = [
   //   title: 'Build Scalable Payment dApps',
   //   subTitle: 'Plug into the OMG network to scale your decentralized\napplications while rooting',
   //   buttonTitle: 'Get Started',
+  //   imagePath: '00-hero2.png',
   //   href: ''
   // },
   // {
@@ -29,6 +31,7 @@ const carouselContent = [
   //   title: 'Build High Throughput\nPayment dApps',
   //   subTitle: 'Integrate your decentralized application with the OMG network to\nachieve high throughput and and lower fees while maintaining strong\nsecurity of funds',
   //   buttonTitle: 'Get Started',
+  //   imagePath: '00-hero2.png',
   //   href: ''
   // },
 ];
@@ -76,10 +79,8 @@ const XCardNumber = styled.div`
 `;
 
 const XCardImage = styled.img`
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  margin-bottom: 1.5rem;
+  width: 80px;
+  height: 80px;
 `;
 
 const XCardText = styled.div`
@@ -144,7 +145,7 @@ const LandingPage = () => {
 
           <div className='cards'>
             <Card>
-              <XCardImage src='' alt=''/>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
               <XCardNumber><span>1</span></XCardNumber>
               <XCardText>
                 <Typography bold>Learn MoreVP Architecture</Typography>
@@ -153,7 +154,7 @@ const LandingPage = () => {
             </Card>
 
             <Card>
-              <XCardImage src='' alt=''/>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
               <XCardNumber><span>2</span></XCardNumber>
               <XCardText>
                 <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
@@ -162,7 +163,7 @@ const LandingPage = () => {
             </Card>
 
             <Card>
-              <XCardImage src='' alt=''/>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
               <XCardNumber><span>3</span></XCardNumber>
               <XCardText>
                 <Typography bold>Making sense of UTXOs</Typography>
@@ -185,7 +186,7 @@ const LandingPage = () => {
               </Typography>
             </div>
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/04-watchersinfoAPI.png'}
               title="Watcher's Informational API"
               subTitle={'API for general Plasma\ninteractions ie, querying\nbalance, making transactions'}
               action={{
@@ -194,7 +195,7 @@ const LandingPage = () => {
               }}
             />
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/05-watcherssecurityAPI.png'}
               title="Watcher's Security Critical API"
               subTitle={'API for Plasma exits ie, getting\nexit data, challenging exits'}
               action={{
@@ -203,7 +204,7 @@ const LandingPage = () => {
               }}
             />
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/06-childchain.png'}
               title="Child-chain API"
               subTitle={'API for Child-chain ie, getting\nblock data (useful for running\nyour own watcher)'}
               action={{
@@ -223,7 +224,7 @@ const LandingPage = () => {
               </Typography>
             </div>
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/07-omgnetwork.png'}
               title="OMG Network"
               subTitle={'Documentation for OMG\nnetwork'}
               action={{
@@ -232,7 +233,7 @@ const LandingPage = () => {
               }}
             />
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/08-omg-js.png'}
               title="OMG-JS"
               subTitle={'Documentation for JavaScript\nClient Library'}
               action={{
@@ -241,7 +242,7 @@ const LandingPage = () => {
               }}
             />
             <Bookmark
-              image='#'
+              image={process.env.PUBLIC_URL + '/img/09-plasma-cli.png'}
               title="Plasma-cli"
               subTitle={'Documentation for Golang\nCommand-line Interface'}
               action={{
