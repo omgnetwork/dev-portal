@@ -103,7 +103,7 @@ const Carousel = () => {
       window.removeEventListener('resize', handleResize);
       clearInterval(carouselInterval);
     }
-  }, [width, position]);
+  });
   
   const handleResize = () => {
     setWidth(node.current.clientWidth);
