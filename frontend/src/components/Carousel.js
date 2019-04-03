@@ -158,7 +158,7 @@ const Carousel = ({ content }) => {
               </div>
 
               <div className='right'>
-                <img src={process.env.PUBLIC_URL + item.imagePath} />
+                <img src={process.env.PUBLIC_URL + item.imagePath} alt='hero' />
               </div>
             </div>
           </XCarouselItem>
