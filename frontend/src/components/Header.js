@@ -68,20 +68,12 @@ const XHeader = styled.div`
 const menuItems = [
   {
     title: 'Block Explorer',
-    href: ''
-  },
-  {
-    title: 'Release Notes',
-    href: ''
+    href: 'http://quest.omg.network'
   },
   {
     title: 'API',
-    href: ''
-  },
-  {
-    title: 'Documentation',
-    href: ''
-  },
+    href: 'https://omisego.github.io/elixir-omg/'
+  }
 ]
 
 const Header = ({ showStatus }) => {

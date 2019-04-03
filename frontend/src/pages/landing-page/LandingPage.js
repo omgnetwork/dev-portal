@@ -8,6 +8,7 @@ import Typography from 'components/Typography';
 import Button from 'components/Button';
 import Divider from 'components/Divider';
 import Bookmark from 'components/Bookmark';
+import Link from 'components/Link';
 
 const carouselContent = [
   {
@@ -16,7 +17,7 @@ const carouselContent = [
     subTitle: 'Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees',
     buttonTitle: 'Get Started',
     imagePath: '/img/00-hero.png',
-    href: ''
+    href: 'https://github.com/omisego/dev-portal/tree/master/Guides'
   },
   // {
   //   preTitle: 'OmiseGO Developer Portal',
@@ -144,32 +145,36 @@ const LandingPage = () => {
           </Typography>
 
           <div className='cards'>
-            <Card>
-              <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
-              <XCardNumber><span>1</span></XCardNumber>
-              <XCardText>
-                <Typography bold>Learn MoreVP Architecture</Typography>
-              </XCardText>
-              <Typography color='text'>Understand MoreVP Plasma Architecture and how it works under the hood</Typography>
-            </Card>
-
-            <Card>
-              <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
-              <XCardNumber><span>2</span></XCardNumber>
-              <XCardText>
-                <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
-              </XCardText>
-              <Typography color='text'>Making interactions with the OMG network's APIs from the browser</Typography>
-            </Card>
-
-            <Card>
-              <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
-              <XCardNumber><span>3</span></XCardNumber>
-              <XCardText>
-                <Typography bold>Making sense of UTXOs</Typography>
-              </XCardText>
-              <Typography color='text'>Start making more complex Plasma transactions from your terminal</Typography>
-            </Card>
+            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/MoreVP_ELI5.md">
+              <Card>
+                <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
+                <XCardNumber><span>1</span></XCardNumber>
+                <XCardText>
+                  <Typography bold>Learn MoreVP Architecture</Typography>
+                </XCardText>
+                <Typography color='text'>Understand MoreVP Plasma Architecture and how it works under the hood</Typography>
+              </Card>
+            </Link>
+            <Link href="#">          
+              <Card>
+                <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
+                <XCardNumber><span>2</span></XCardNumber>
+                <XCardText>
+                  <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
+                </XCardText>
+                <Typography color='text'>Making interactions with the OMG network's APIs from the browser</Typography>
+              </Card>
+            </Link>
+            <Link href="#">
+              <Card>
+                <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
+                <XCardNumber><span>3</span></XCardNumber>
+                <XCardText>
+                  <Typography bold>Making sense of UTXOs</Typography>
+                </XCardText>
+                <Typography color='text'>Start making more complex Plasma transactions from your terminal</Typography>
+              </Card>
+            </Link>
           </div>
         </XCards>
 
@@ -190,7 +195,7 @@ const LandingPage = () => {
               title="Watcher's Informational API"
               subTitle={'API for general Plasma\ninteractions ie, querying\nbalance, making transactions'}
               action={{
-                href: '#',
+                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json',
                 text: 'Learn more'
               }}
             />
@@ -199,7 +204,7 @@ const LandingPage = () => {
               title="Watcher's Security Critical API"
               subTitle={'API for Plasma exits ie, getting\nexit data, challenging exits'}
               action={{
-                href: '#',
+                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json',
                 text: 'Learn more'
               }}
             />
@@ -208,7 +213,7 @@ const LandingPage = () => {
               title="Child-chain API"
               subTitle={'API for Child-chain ie, getting\nblock data (useful for running\nyour own watcher)'}
               action={{
-                href: '#',
+                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json',
                 text: 'Learn more'
               }}
             />
@@ -228,7 +233,7 @@ const LandingPage = () => {
               title="OMG Network"
               subTitle={'Documentation for OMG\nnetwork'}
               action={{
-                href: '#',
+                href: 'https://github.com/omisego/elixir-omg/blob/master/README.md',
                 text: 'Learn more'
               }}
             />
@@ -237,7 +242,7 @@ const LandingPage = () => {
               title="OMG-JS"
               subTitle={'Documentation for JavaScript\nClient Library'}
               action={{
-                href: '#',
+                href: 'https://github.com/omisego/omg-js/blob/master/README.md',
                 text: 'Learn more'
               }}
             />
@@ -246,7 +251,7 @@ const LandingPage = () => {
               title="Plasma-cli"
               subTitle={'Documentation for Golang\nCommand-line Interface'}
               action={{
-                href: '#',
+                href: 'https://github.com/omisego/plasma-cli/blob/master/README.md',
                 text: 'Learn more'
               }}
             />
@@ -265,7 +270,7 @@ const LandingPage = () => {
             </Typography>
           </span>
           <span>
-            <Button href="">
+            <Button href="https://omisego-odp.typeform.com/to/T8dDjF">
               Apply Now
             </Button>
           </span>

@@ -63,7 +63,7 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/MoreVP_ELI5.md'>
               <Typography color='text' size='S'>
                 {`Learn MoreVP\nArchitecture`}
               </Typography>
@@ -92,21 +92,21 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json'>
               <Typography color='text' size='S'>
                 {`Watcher's\nInformational API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json'>
               <Typography color='text' size='S'>
                 {`Watcher's\nSecurity Critical API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json'>
               <Typography color='text' size='S'>
                 {`Child-chain API`}
               </Typography>
@@ -121,21 +121,21 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/elixir-omg/blob/master/README.md'>
               <Typography color='text' size='S'>
                 {`OMG Network`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/omg-js/blob/master/README.md'>
               <Typography color='text' size='S'>
                 {`OMG-JS`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/plasma-cli/blob/master/README.md'>
               <Typography color='text' size='S'>
                 {`Plasma-cli`}
               </Typography>
@@ -150,14 +150,14 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='http://quest.omg.network'>
               <Typography color='text' size='S'>
                 {`Blockexplorer`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://omisego.network/'>
               <Typography color='text' size='S'>
                 {`OmiseGO.network`}
               </Typography>
@@ -173,13 +173,13 @@ const Footer = () => {
           </span>
 
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://reddit.com/r/omise_go/'>
               <img src={process.env.PUBLIC_URL + '/img/reddit.svg'} alt='reddit' className='social' />
             </Link>
-            <Link href='#'>
+            <Link href='https://twitter.com/omise_go'>
               <img src={process.env.PUBLIC_URL + '/img/twitter.svg'} alt='twitter' className='social' />
             </Link>
-            <Link href='#'>
+            <Link href='https://www.facebook.com/OmiseGO/'>
               <img src={process.env.PUBLIC_URL + '/img/facebook.svg'} alt='facebook' className='social' />
             </Link>
           </span>
