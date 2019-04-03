@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Router from './router';
 import Theme from './theme';
+import './index.css';
 
 const App = () => {
   return (
