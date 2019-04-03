@@ -5,9 +5,9 @@ import Link from './Link';
 
 const XDropdown = styled.div`
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  left: -1.5rem;
+  right: -1.5rem;
+  top: -1.5rem;
   transform: translateY(84px);
   overflow: hidden;
   background-color: ${props => props.theme.background};

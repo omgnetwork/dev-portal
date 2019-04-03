@@ -23,7 +23,8 @@ const Typography = ({
   size,
   color,
   className,
-  center
+  center,
+  ...restProps
 }) => {
   const getSize = (_size = 'medium') => {
     switch(_size) {
@@ -47,6 +48,7 @@ const Typography = ({
       color={color}
       className={className}
       center={center}
+      {...restProps}
     >
       {children}
     </XTypography>

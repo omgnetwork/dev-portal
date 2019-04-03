@@ -177,7 +177,7 @@ const LandingPage = () => {
         <XBookmarks>
           <div className='bookmark-column'>
             <div className='bookmark-intro'>
-              <Typography bold size='L'>
+              <Typography bold size='L' style={{ paddingBottom: '5px' }}>
                 APIs
               </Typography>
               <Typography color='text'>
@@ -215,7 +215,7 @@ const LandingPage = () => {
 
           <div className='bookmark-column'>
             <div className='bookmark-intro'>
-              <Typography bold size='L'>
+              <Typography bold size='L' style={{ paddingBottom: '5px' }}>
                 Documentation
               </Typography>
               <Typography color='text'>

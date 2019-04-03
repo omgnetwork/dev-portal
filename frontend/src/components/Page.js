@@ -18,7 +18,7 @@ const XPage = styled.div`
 const Page = ({ children }) => {
   return (
     <XPage>
-      <Header />
+      <Header showStatus={false} />
 
       <div className='page-child'>
         { children }

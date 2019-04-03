@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import styled from 'styled-components';
 
+import Status from './Status';
 import Hamburger from './Hamburger';
 import Dropdown from './Dropdown';
 import Link from './Link';
@@ -18,13 +19,20 @@ const XHeader = styled.div`
   background-color: ${props => props.theme.background};
 
   .header-content {
+    position: relative;
     max-width: ${props => props.theme.pageWidth};
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     @media ${props => props.theme.mobileBreak} {
       justify-content: space-between;
+    }
+
+    .header-status {
+      position: absolute;
+      right: 0;
     }
 
     .header-desktop {
@@ -76,7 +84,7 @@ const menuItems = [
   },
 ]
 
-const Header = () => {
+const Header = ({ showStatus }) => {
   const [ isOpen, setIsOpen ] = useState(false);
 
   const hamburgerClick = () => {
@@ -104,6 +112,12 @@ const Header = () => {
           <Hamburger isOpen={isOpen} hamburgerClick={hamburgerClick} />
           <Dropdown isOpen={isOpen} hamburgerClick={hamburgerClick} menuItems={menuItems}/>
         </div>
+
+        {showStatus && (
+          <div className='header-status'>
+            <Status />
+          </div>
+        )}
       </div>
     </XHeader>
   );
