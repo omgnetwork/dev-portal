@@ -12,7 +12,7 @@ const XDropdown = styled.div`
   overflow: hidden;
   background-color: ${props => props.theme.background};
   transition: height 300ms ease-in-out;
-  height: ${props => props.isOpen ? '220px' : 0};
+  height: ${props => props.isOpen ? '120px' : 0};
   box-shadow: ${props => props.isOpen ? props.theme.boxShadow : 'initial'};
 
   .dropdown-link {
