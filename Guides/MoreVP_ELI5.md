@@ -1,4 +1,4 @@
-2. MoreVP Plasma ELI5
+# MoreVP Plasma ELI5
 Plasma is a layer 2 (i.e. off-chain) scaling solution for Ethereum.
 
 The difference between Plasma and other layer 2 solutions is that every block on the plasma (or child) chain is committed to the root chain. This provides the benefit that even if something goes wrong on child chain, honest users will always be able to exit the child chain and recover their funds on the root chain.
