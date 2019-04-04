@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="footer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-868.000000, -147.000000)">
+        <g fill="#FFFFFF" id="Group-3">
+            <g transform="translate(607.000000, 118.000000)">
+                <g id="facebook" transform="translate(261.000000, 29.000000)">
+                    <path d="M29.6999985,59.399997 C13.2971423,59.399997 0,46.1028547 0,29.6999985 C0,13.2971423 13.2971423,0 29.6999985,0 C46.1028547,0 59.399997,13.2971423 59.399997,29.6999985 C59.399997,46.1028547 46.1028547,59.399997 29.6999985,59.399997 Z M32,24.5 L32,21.2 C32,19.77 32.33,19 34.64,19 L37.5,19 L37.5,13.5 L33.1,13.5 C27.6,13.5 25.4,17.13 25.4,21.2 L25.4,24.5 L21,24.5 L21,30 L25.4,30 L25.4,46.5 L32,46.5 L32,30 L36.84,30 L37.5,24.5 L32,24.5 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
