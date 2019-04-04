@@ -14,7 +14,7 @@ const carouselContent = [
   {
     preTitle: 'OmiseGO Developer Portal',
     title: 'Build Scalable Decentralized\nPayment Apps',
-    subTitle: 'Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees',
+    subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety gaurantees',
     buttonTitle: 'Get Started',
     imagePath: '/img/00-hero.png',
     href: 'https://github.com/omisego/dev-portal/tree/master/Guides'
@@ -167,7 +167,7 @@ const LandingPage = () => {
                 <XCardText>
                   <Typography bold>Learn MoreVP Architecture</Typography>
                 </XCardText>
-                <Typography color='text'>Understand MoreVP Plasma Architecture and how it works under the hood</Typography>
+                <Typography color='text'>Understand MoreVP Plasma architecture and how it works under the hood</Typography>
               </Card>
             </Link>
             <Link href="#">          
@@ -177,7 +177,7 @@ const LandingPage = () => {
                 <XCardText>
                   <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
                 </XCardText>
-                <Typography color='text'>Making interactions with the OMG network's APIs from the browser</Typography>
+                <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
               </Card>
             </Link>
             <Link href="#">
@@ -202,13 +202,13 @@ const LandingPage = () => {
                 APIs
               </Typography>
               <Typography color='text'>
-                Explore and interact with OMG network's APIs
+                Explore and interact with OMG Network APIs
               </Typography>
             </div>
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/04-watchersinfoAPI.png'}
-              title="Watcher's Informational API"
-              subTitle={'API for general Plasma\ninteractions ie, querying\nbalance, making transactions'}
+              title="Watcher Informational API"
+              subTitle={'API for common interactions\n balance query, making transactions'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json',
                 text: 'Learn more'
@@ -216,8 +216,8 @@ const LandingPage = () => {
             />
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/05-watcherssecurityAPI.png'}
-              title="Watcher's Security Critical API"
-              subTitle={'API for Plasma exits ie, getting\nexit data, challenging exits'}
+              title="Watcher Security Critical API"
+              subTitle={'Plasma exit operations API'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json',
                 text: 'Learn more'
@@ -225,8 +225,8 @@ const LandingPage = () => {
             />
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/06-childchain.png'}
-              title="Child-chain API"
-              subTitle={'API for Child-chain ie, getting\nblock data (useful for running\nyour own watcher)'}
+              title="Childchain API"
+              subTitle={'API for Childchain\n get block data to implement your own watcher'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json',
                 text: 'Learn more'
@@ -240,7 +240,7 @@ const LandingPage = () => {
                 Documentation
               </Typography>
               <Typography color='text'>
-                Read the docs for our developers resources
+                Read the docs for developer resources
               </Typography>
             </div>
             <Bookmark
@@ -263,7 +263,7 @@ const LandingPage = () => {
             />
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/09-plasma-cli.png'}
-              title="Plasma-cli"
+              title="Plasma CLI"
               subTitle={'Documentation for Golang\nCommand-line Interface'}
               action={{
                 href: 'https://github.com/omisego/plasma-cli/blob/master/README.md',

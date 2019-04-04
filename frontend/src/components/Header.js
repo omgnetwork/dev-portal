@@ -71,7 +71,7 @@ const menuItems = [
     href: 'http://quest.omg.network'
   },
   {
-    title: 'API',
+    title: 'API Specification',
     href: 'https://omisego.github.io/elixir-omg/'
   }
 ]
