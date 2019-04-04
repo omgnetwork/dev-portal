@@ -29,33 +29,37 @@ const XBookmark = styled.div`
     span {
       padding-bottom: 0.5rem;
     }
+
+    .action {
+      color: ${props => props.theme.primary}
+    }
   }
 `;
 
 const Bookmark = ({ image, title, subTitle, action }) => {
   return (
-    <XBookmark>
-      <img className='image' src={image} alt='bookmark'/>
-      <div className='content'>
-        <span>
-          <Typography bold>
-            {title}
-          </Typography>
-        </span>
+    <Link href={action.href}>
+      <XBookmark>
+        <img className='image' src={image} alt='bookmark'/>
+        <div className='content'>
+          <span>
+            <Typography bold>
+              {title}
+            </Typography>
+          </span>
 
-        <span>
-          <Typography color='text'>
-            {subTitle}
-          </Typography>
-        </span>
+          <span>
+            <Typography color='text'>
+              {subTitle}
+            </Typography>
+          </span>
 
-        <span>
-          <Link color='primary' href={action.href}>
+          <span className='action'>
             {action.text}
-          </Link>
-        </span>
-      </div>
-    </XBookmark>
+          </span>
+        </div>
+      </XBookmark>
+    </Link>
   );
 }
 

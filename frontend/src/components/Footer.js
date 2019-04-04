@@ -46,6 +46,7 @@ const XFooter = styled.div`
           width: 30px;
           height: 30px;
           margin-right: 0.7rem;
+          color: ${props => props.theme.footerText};
         }
       }
     }
@@ -64,21 +65,21 @@ const Footer = () => {
           </span>
           <span className='footer-item'>
             <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/MoreVP_ELI5.md'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Learn MoreVP\nArchitecture`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='#'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Get to know\nthe Plasma Interface`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='#'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Making sense of UTXOs`}
               </Typography>
             </Link>
@@ -93,21 +94,21 @@ const Footer = () => {
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Watcher's\nInformational API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Watcher's\nSecurity Critical API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Child-chain API`}
               </Typography>
             </Link>
@@ -122,21 +123,21 @@ const Footer = () => {
           </span>
           <span className='footer-item'>
             <Link href='https://github.com/omisego/elixir-omg/blob/master/README.md'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`OMG Network`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://github.com/omisego/omg-js/blob/master/README.md'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`OMG-JS`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://github.com/omisego/plasma-cli/blob/master/README.md'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Plasma-cli`}
               </Typography>
             </Link>
@@ -151,14 +152,14 @@ const Footer = () => {
           </span>
           <span className='footer-item'>
             <Link href='http://quest.omg.network'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`Blockexplorer`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.network/'>
-              <Typography color='text' size='S'>
+              <Typography color='footerText' size='S'>
                 {`OmiseGO.network`}
               </Typography>
             </Link>
@@ -185,7 +186,7 @@ const Footer = () => {
           </span>
 
           <span className='footer-item' style={{ position: 'absolute', bottom: 0 }}>
-            <Typography color='text' size='XS'>
+            <Typography color='footerText' size='XS'>
               {`© 2019 Omise.\nAll rights Reserved`}
             </Typography>
           </span>

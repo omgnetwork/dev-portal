@@ -39,7 +39,7 @@ const carouselContent = [
 
 const XLayout = styled.div`
   max-width: ${props => props.theme.contentWidth};
-  padding: 4rem 1.5rem;
+  padding: 0 1.5rem;
   margin: 0 auto;
 `;
 
@@ -47,11 +47,12 @@ const XCards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 80px 0;
 
   .cards {
     display: flex;
     flex-direction: row;
-    padding: 2rem 0 4rem 0;
+    padding-top: 2rem;
 
     a {
       flex: 1 1 100%;
@@ -104,7 +105,7 @@ const XCardText = styled.div`
 `;
 
 const XBookmarks = styled.div`
-  padding: 4rem 0;
+  padding: 80px 0;
   display: flex;
   flex-direction: row;
 
@@ -132,7 +133,7 @@ const XCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 4rem 0;
+  padding-bottom: 80px;
 
   @media ${props => props.theme.mobileBreak} {
     align-items: center;
