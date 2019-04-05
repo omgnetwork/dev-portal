@@ -73,6 +73,10 @@ const menuItems = [
   {
     title: 'API Specification',
     href: 'https://omisego.github.io/elixir-omg/'
+  },
+  {
+    title: 'Ari Endpoints',
+    href: 'https://github.com/omisego/dev-portal/blob/master/Guides/Network_endpoints.md'
   }
 ]
 
