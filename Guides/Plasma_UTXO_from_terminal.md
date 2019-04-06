@@ -68,7 +68,7 @@ you should see a `UTXO position`, we will have a use for this in the next step
 Run `./plasma_cli create account` again to make Bob's wallet. Now, we will make the transaction to split Alice's single UTXO into 3.
 
 ```
-./plasma_cli split --fromutxo=UTXO_position --fromowner="alice_address" --privatekey="alice_privatekey" --toowner="bob_address" --outputs=3 --toamount=1200 --watcher="http://watcher.ari.omg.network/"
+./plasma_cli split --fromutxo=UTXO_position --privatekey="alice_privatekey" --toowner="bob_address" --outputs=3 --toamount=1200 --watcher="http://watcher.ari.omg.network/"
 ```
 
 The above transaction will create a 1 input, 4 outputs transaction as shown visually below. Where the first 3 Outputs are our 1200, and the last value is change to send back to Alice
@@ -88,7 +88,7 @@ You should see 3 UTXOs appeared for Bob
 Having 3 dust UTXOs are not very helpful, For real world scenarios- Bob would most likely want to cosolidate his UTXOs to something easily spendable and exitable, giving less overhead for Bob's wallet to manage his funds. So our next goal is to merge these UTXOs for Bob.
 
 ```
-./plasma_cli merge --fromutxo=UTXO_pos_1 --fromutxo=UTXO_pos_2 --fromutxo=UTXO_pos_3 --privatekey="bob_private_key" --fromowner="bob_address" --watcher="http://watcher.ari.omg.network/" 
+./plasma_cli merge --fromutxo=UTXO_pos_1 --fromutxo=UTXO_pos_2 --fromutxo=UTXO_pos_3 --privatekey="bob_private_key" --watcher="http://watcher.ari.omg.network/" 
 ```
 
 the above transaction will take the 3 UTXOs input from Bob and accumulate it into a single large UTXO output. As shown in diagram below
@@ -108,7 +108,7 @@ only a single UTXO should be returned.
 Now that we have a single UTXO, we can conveniently send some funds back to Alice
 
 ```
-./plasma_cli send --fromutxo=UTXO_pos --fromowner="bob_address" --privatekey="bob_privatekey" --toowner="alice_address" --toamount=3000 --watcher="http://watcher.ari.omg.network/"
+./plasma_cli send --fromutxo=UTXO_pos --privatekey="bob_privatekey" --toowner="alice_address" --toamount=3000 --watcher="http://watcher.ari.omg.network/"
 ```
 
 The transaction above is simply a 1 input, 2 outputs. Where the first input is amount you send to Alice, and the second being the change sent back to Bob as shown below.
