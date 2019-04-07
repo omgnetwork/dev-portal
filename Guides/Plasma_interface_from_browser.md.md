@@ -1,5 +1,13 @@
 # Get to know the Plasma Interface
 
+Estimated time: 5 minutes
+
+Goal:
+
+- To understand plasma transactionss from end-to-end 
+- To get first hand experience in making interactions with plasma
+- To learn the process of making `deposit`, `transact` and `exit` 
+
 In this guide, we will introduce you the Plasma Interface by making transactions directly from your browser. Just make sure you have `Git` installed and have access to code editor. No need to install any dependencies.
 
 ### Initial Setup
@@ -7,7 +15,7 @@ In this guide, we will introduce you the Plasma Interface by making transactions
 
 2. Open up the `omg-wallet.js` on your text editor
 
-3. Replace the current configs in `omg-wallet.js` with the  [following Network Endpoints](https://github.com/omisego/dev-portal/blob/master/Readme.md) then save the file.
+3. Replace the current configs in `omg-wallet.js` with the  [following Network Endpoints](https://github.com/omisego/dev-portal/blob/master/Guides/Network_endpoints.md) then save the file.
 
 #### 1. Creating and funding the wallet
 1.1. First, open up your browser and navigate to the file `index.html` 

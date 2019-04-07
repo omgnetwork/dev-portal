@@ -171,7 +171,7 @@ const LandingPage = () => {
                 <Typography color='text'>Understand MoreVP Plasma architecture and how it works under the hood</Typography>
               </Card>
             </Link>
-            <Link href="#">          
+            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_interface_from_browser.md.md">          
               <Card>
                 <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
                 <XCardNumber><span>2</span></XCardNumber>
@@ -181,7 +181,7 @@ const LandingPage = () => {
                 <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
               </Card>
             </Link>
-            <Link href="#">
+            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_UTXO_from_terminal.md">
               <Card>
                 <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
                 <XCardNumber><span>3</span></XCardNumber>

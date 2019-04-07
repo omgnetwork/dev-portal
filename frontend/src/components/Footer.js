@@ -71,14 +71,14 @@ const Footer = () => {
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_interface_from_browser.md.md'>
               <Typography color='footerText' size='S'>
                 {`Get to know\nthe Plasma Interface`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='#'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_UTXO_from_terminal.md'>
               <Typography color='footerText' size='S'>
                 {`Making sense of UTXOs`}
               </Typography>
