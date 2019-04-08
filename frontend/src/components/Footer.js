@@ -194,7 +194,7 @@ const Footer = () => {
 
           <span className='footer-item' style={{ position: 'absolute', bottom: 0 }}>
             <Typography color='footerText' size='XS'>
-              {`© 2019 Omise.\nAll rights Reserved`}
+              {`© 2019 OmiseGO.\nAll rights Reserved`}
             </Typography>
           </span>
         </div>
