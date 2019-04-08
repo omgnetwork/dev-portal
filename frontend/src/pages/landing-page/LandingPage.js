@@ -17,7 +17,7 @@ const carouselContent = [
     subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety gaurantees',
     buttonTitle: 'Get Started',
     imagePath: '/img/00-hero.png',
-    href: 'https://github.com/omisego/dev-portal/tree/master/Guides'
+    href: 'https://github.com/omisego/dev-portal/tree/master/guides'
   },
   // {
   //   preTitle: 'OmiseGO Developer Portal',
@@ -161,7 +161,7 @@ const LandingPage = () => {
           </Typography>
 
           <div className='cards'>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/MoreVP_ELI5.md">
+            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/morevp_eli5.md">
               <Card>
                 <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
                 <XCardNumber><span>1</span></XCardNumber>
@@ -171,7 +171,7 @@ const LandingPage = () => {
                 <Typography color='text'>Understand MoreVP Plasma architecture and how it works under the hood</Typography>
               </Card>
             </Link>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_interface_from_browser.md.md">          
+            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_interface_from_browser.md">
               <Card>
                 <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
                 <XCardNumber><span>2</span></XCardNumber>
@@ -181,7 +181,7 @@ const LandingPage = () => {
                 <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
               </Card>
             </Link>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_UTXO_from_terminal.md">
+            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md">
               <Card>
                 <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
                 <XCardNumber><span>3</span></XCardNumber>
