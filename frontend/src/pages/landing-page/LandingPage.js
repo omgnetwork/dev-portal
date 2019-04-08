@@ -282,7 +282,7 @@ const LandingPage = () => {
           </span>
           <span>
             <Typography center color='text'>
-              {`Be the first to know about all the development updates and get the chance to\ntry out the latest features, tools, and libraries, plus the chance\nto talk to the OmiseGO Product and Engineering team.`}
+              {`Be the first to know about all the development updates and get the chance to\ntry out the latest features, tools, and libraries, plus the chance\nto talk to the OmiseGO Product and Engineering teams.`}
             </Typography>
           </span>
           <span>
