@@ -1,13 +1,13 @@
 {
-  "main.css": "/elixir-omg/static/css/main.27846e46.chunk.css",
-  "main.js": "/elixir-omg/static/js/main.f0662105.chunk.js",
-  "main.js.map": "/elixir-omg/static/js/main.f0662105.chunk.js.map",
-  "runtime~main.js": "/elixir-omg/static/js/runtime~main.c85a0d34.js",
-  "runtime~main.js.map": "/elixir-omg/static/js/runtime~main.c85a0d34.js.map",
-  "static/js/2.567ad3cf.chunk.js": "/elixir-omg/static/js/2.567ad3cf.chunk.js",
-  "static/js/2.567ad3cf.chunk.js.map": "/elixir-omg/static/js/2.567ad3cf.chunk.js.map",
-  "index.html": "/elixir-omg/index.html",
-  "precache-manifest.52c90ef115dbb247469efa480f6ae42b.js": "/elixir-omg/precache-manifest.52c90ef115dbb247469efa480f6ae42b.js",
-  "service-worker.js": "/elixir-omg/service-worker.js",
-  "static/css/main.27846e46.chunk.css.map": "/elixir-omg/static/css/main.27846e46.chunk.css.map"
+  "main.css": "/dev-portal/static/css/main.27846e46.chunk.css",
+  "main.js": "/dev-portal/static/js/main.493b4659.chunk.js",
+  "main.js.map": "/dev-portal/static/js/main.493b4659.chunk.js.map",
+  "runtime~main.js": "/dev-portal/static/js/runtime~main.ec1565ee.js",
+  "runtime~main.js.map": "/dev-portal/static/js/runtime~main.ec1565ee.js.map",
+  "static/js/2.af107051.chunk.js": "/dev-portal/static/js/2.af107051.chunk.js",
+  "static/js/2.af107051.chunk.js.map": "/dev-portal/static/js/2.af107051.chunk.js.map",
+  "index.html": "/dev-portal/index.html",
+  "precache-manifest.06dbc7c3cde2f35ee3683fa430eca3ae.js": "/dev-portal/precache-manifest.06dbc7c3cde2f35ee3683fa430eca3ae.js",
+  "service-worker.js": "/dev-portal/service-worker.js",
+  "static/css/main.27846e46.chunk.css.map": "/dev-portal/static/css/main.27846e46.chunk.css.map"
 }
