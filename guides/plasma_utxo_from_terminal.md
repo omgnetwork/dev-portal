@@ -116,3 +116,6 @@ The transaction above is simply a 1 input, 2 outputs. Where the first input is a
 ![Send Transaction Example](./assets/send-example.png)
 
 That's it, you just learned the mental model of plasma `merge` and `split` transactions.
+
+### Transaction fees
+Note that transactions require fees to be paid. See here for an explanation of how fees work: [Transaction fees](https://github.com/omisego/dev-portal/blob/master/guides/transaction_fees.md).
