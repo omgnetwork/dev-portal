@@ -287,7 +287,7 @@ const LandingPage = () => {
           </span>
           <span>
             <Button href="https://omisego-odp.typeform.com/to/T8dDjF">
-              Apply Now
+              Sign Up Now
             </Button>
           </span>
         </XCTA>
