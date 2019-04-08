@@ -17,7 +17,7 @@ const carouselContent = [
     subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety gaurantees',
     buttonTitle: 'Get Started',
     imagePath: '/img/00-hero.png',
-    href: 'https://github.com/omisego/dev-portal/tree/master/guides'
+    href: 'https://github.com/omisego/dev-portal/tree/master/guides/get_started.md'
   },
   // {
   //   preTitle: 'OmiseGO Developer Portal',
@@ -287,7 +287,7 @@ const LandingPage = () => {
           </span>
           <span>
             <Button href="https://omisego-odp.typeform.com/to/T8dDjF">
-              Apply Now
+              Sign Up Now
             </Button>
           </span>
         </XCTA>
