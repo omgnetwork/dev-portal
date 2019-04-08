@@ -164,6 +164,13 @@ const Footer = () => {
               </Typography>
             </Link>
           </span>
+          <span className='footer-item'>
+            <Link href='https://github.com/omisego'>
+              <Typography color='footerText' size='S'>
+                {`GitHub`}
+              </Typography>
+            </Link>
+          </span>
         </div>
 
         <div className='footer-column' style={{ position: 'relative' }}>
