@@ -209,7 +209,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/04-watchersinfoAPI.png'}
               title="Watcher Informational API"
-              subTitle={'API for common interactions\n balance query, making transactions'}
+              subTitle={'API for common interactions:\n balance query, making transactions'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json',
                 text: 'Learn more'
@@ -227,7 +227,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/06-childchain.png'}
               title="Childchain API"
-              subTitle={'API for Childchain\n get block data to implement your own watcher'}
+              subTitle={'Get block data to implement your own watcher'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json',
                 text: 'Learn more'
@@ -277,7 +277,7 @@ const LandingPage = () => {
         <XCTA>
           <span>
             <Typography center bold size='XL'>
-              Join the OmiseGO Developers Program
+              Join the OmiseGO Developer Program
             </Typography>
           </span>
           <span>

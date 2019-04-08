@@ -109,7 +109,7 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json'>
               <Typography color='footerText' size='S'>
-                {`Child-chain API`}
+                {`Childchain API`}
               </Typography>
             </Link>
           </span>
@@ -138,7 +138,7 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='https://github.com/omisego/plasma-cli/blob/master/README.md'>
               <Typography color='footerText' size='S'>
-                {`plasma-cli`}
+                {`Plasma CLI`}
               </Typography>
             </Link>
           </span>
