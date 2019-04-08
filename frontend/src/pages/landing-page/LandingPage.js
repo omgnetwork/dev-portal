@@ -227,7 +227,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/06-childchain.png'}
               title="Childchain API"
-              subTitle={'Get block data to implement your own watcher'}
+              subTitle={'Get block data to implement your own Watcher'}
               action={{
                 href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json',
                 text: 'Learn more'
@@ -247,7 +247,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/07-omgnetwork.png'}
               title="OMG Network"
-              subTitle={'Documentation for OMG\nnetwork'}
+              subTitle={'Documentation for OMG\nNetwork'}
               action={{
                 href: 'https://github.com/omisego/elixir-omg/blob/master/README.md',
                 text: 'Learn more'
@@ -255,8 +255,8 @@ const LandingPage = () => {
             />
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/08-omg-js.png'}
-              title="OMG-JS"
-              subTitle={'Documentation for JavaScript\nClient Library'}
+              title="omg-js"
+              subTitle={'Documentation for the JavaScript\nIntegration Library'}
               action={{
                 href: 'https://github.com/omisego/omg-js/blob/master/README.md',
                 text: 'Learn more'
@@ -265,7 +265,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/09-plasma-cli.png'}
               title="Plasma CLI"
-              subTitle={'Documentation for Golang\nCommand-line Interface'}
+              subTitle={'Documentation for Golang\ncommand-line tool'}
               action={{
                 href: 'https://github.com/omisego/plasma-cli/blob/master/README.md',
                 text: 'Learn more'
