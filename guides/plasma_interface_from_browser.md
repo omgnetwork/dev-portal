@@ -26,7 +26,7 @@ In this guide, we will introduce you the Plasma Interface by making transactions
 
 #### 2. Deposit
 
-2.1. Put your address in *From addres:* field and put the amount to deposit inside the *value* field. Click [Send] button.
+2.1. Put your address in *From address:* field and put the amount to deposit inside the *value* field. Click [Send] button.
 
 2.2. Here you will have to wait for about 2-3 minutes depending on the network congestion. You can refresh balance via the [refresh] button. After a while, your balance will be updated
 
