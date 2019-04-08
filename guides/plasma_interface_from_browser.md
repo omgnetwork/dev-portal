@@ -4,9 +4,9 @@ Estimated time: 5 minutes
 
 Goal:
 
-- To understand plasma transactionss from end-to-end 
+- To understand plasma transactionss from end-to-end
 - To get first hand experience in making interactions with plasma
-- To learn the process of making `deposit`, `transact` and `exit` 
+- To learn the process of making `deposit`, `transact` and `exit`
 
 In this guide, we will introduce you the Plasma Interface by making transactions directly from your browser. Just make sure you have `Git` installed and have access to code editor. No need to install any dependencies.
 
@@ -15,10 +15,10 @@ In this guide, we will introduce you the Plasma Interface by making transactions
 
 2. Open up the `omg-wallet.js` on your text editor
 
-3. Replace the current configs in `omg-wallet.js` with the  [following Network Endpoints](https://github.com/omisego/dev-portal/blob/master/Guides/Network_endpoints.md) then save the file.
+3. Replace the current configs in `omg-wallet.js` with the  [following Network Endpoints](https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md) then save the file.
 
 #### 1. Creating and funding the wallet
-1.1. First, open up your browser and navigate to the file `index.html` 
+1.1. First, open up your browser and navigate to the file `index.html`
 
 1.2. Click on [create wallet] button, make sure to write down your seed phrase somewhere
 
@@ -32,7 +32,7 @@ In this guide, we will introduce you the Plasma Interface by making transactions
 
 #### 3. Transact
 
-3.1. Add the inputs to the `Transfer` fields, click send. Depending on the network congestion, you might have to wait up for 10-15 seconds before clicking [refresh], and the balance will get updated. 
+3.1. Add the inputs to the `Transfer` fields, click send. Depending on the network congestion, you might have to wait up for 10-15 seconds before clicking [refresh], and the balance will get updated.
 
 3.2. To see the status of your transaction. You could also open up your browser console and retrieve the TX hash, by searching for the hash through [Plasma Block Explorer](http://quest.omg.network) you should see the details of the transaction.
 

@@ -76,7 +76,7 @@ const menuItems = [
   },
   {
     title: 'Ari Endpoints',
-    href: 'https://github.com/omisego/dev-portal/blob/master/Guides/Network_endpoints.md'
+    href: 'https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md'
   }
 ]
 
