@@ -3,9 +3,9 @@
 ## Network endpoints
 
 ```
-CHILDCHAIN_URL: “http://ari.omg.network/”
+CHILDCHAIN_URL: “https://ari.omg.network/”
 
-WATCHER_URL: “http://watcher.ari.omg.network/”
+WATCHER_URL: “https://watcher.ari.omg.network/”
 
 WEB3_PROVIDER_URL: "https://rinkeby.infura.io/"
 (or any IPC Provider)
@@ -25,4 +25,5 @@ Current Exit Period: 86400 seconds (1 day)
 Version: 0.1
 
 Block Explorer: https://quest.ari.omg.network
+
 ```
