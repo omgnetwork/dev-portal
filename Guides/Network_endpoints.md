@@ -1,9 +1,9 @@
 ## Ari Network Endpoints
 
 ```
-CHILDCHAIN_URL: “http://ari.omg.network/”
+CHILDCHAIN_URL: “https://ari.omg.network/”
 
-WATCHER_URL: “http://watcher.ari.omg.network/”
+WATCHER_URL: “https://watcher.ari.omg.network/”
 
 PLASMA_CONTRACT_ADDRESS: “0x44de0ec539b8c4a4b530c78620fe8320167f2f74”
 
