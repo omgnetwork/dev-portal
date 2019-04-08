@@ -95,14 +95,14 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json'>
               <Typography color='footerText' size='S'>
-                {`Watcher's\nInformational API`}
+                {`Watcher\nInformational API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json'>
               <Typography color='footerText' size='S'>
-                {`Watcher's\nSecurity Critical API`}
+                {`Watcher\nSecurity Critical API`}
               </Typography>
             </Link>
           </span>
@@ -118,7 +118,7 @@ const Footer = () => {
         <div className='footer-column'>
           <span className='footer-item'>
             <Typography color='background' bold size='S'>
-              Documentations
+              Documentation
             </Typography>
           </span>
           <span className='footer-item'>
@@ -131,14 +131,14 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='https://github.com/omisego/omg-js/blob/master/README.md'>
               <Typography color='footerText' size='S'>
-                {`OMG-JS`}
+                {`omg-js`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://github.com/omisego/plasma-cli/blob/master/README.md'>
               <Typography color='footerText' size='S'>
-                {`Plasma-cli`}
+                {`plasma-cli`}
               </Typography>
             </Link>
           </span>
@@ -153,14 +153,14 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='http://quest.omg.network'>
               <Typography color='footerText' size='S'>
-                {`Blockexplorer`}
+                {`Block Explorer`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
             <Link href='https://omisego.network/'>
               <Typography color='footerText' size='S'>
-                {`OmiseGO.network`}
+                {`OmiseGO`}
               </Typography>
             </Link>
           </span>
