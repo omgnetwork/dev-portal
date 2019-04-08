@@ -64,21 +64,21 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/MoreVP_ELI5.md'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/guides/morevp_eli5.md'>
               <Typography color='footerText' size='S'>
                 {`Learn MoreVP\nArchitecture`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_interface_from_browser.md.md'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/guides/plasma_interface_from_browser.md'>
               <Typography color='footerText' size='S'>
                 {`Get to know\nthe Plasma Interface`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='https://github.com/omisego/dev-portal/blob/master/Guides/Plasma_UTXO_from_terminal.md'>
+            <Link href='https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md'>
               <Typography color='footerText' size='S'>
                 {`Making sense of UTXOs`}
               </Typography>
