@@ -93,7 +93,7 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml'>
+            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/informational_api_specs.yaml'>
               <Typography color='footerText' size='S'>
                 {`Watcher\nInformational API`}
               </Typography>
