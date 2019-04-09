@@ -211,7 +211,7 @@ const LandingPage = () => {
               title="Watcher Informational API"
               subTitle={'API for common interactions:\n balance query, making transactions'}
               action={{
-                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/informational_api_specs.yaml',
                 text: 'Learn more'
               }}
             />

@@ -8,7 +8,7 @@
 
 ### API Endpoints
 
-- [Watcher Informational API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
+- [Watcher Informational API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/informational_api_specs.yaml)
 
 - [Watcher Security Critical API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
 
