@@ -8,11 +8,11 @@
 
 ### API Endpoints
 
-- [Watcher Informational API](https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json)
+- [Watcher Informational API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
 
-- [Watcher Security Critical API](https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json)
+- [Watcher Security Critical API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
 
-- [Childchain API](https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json)
+- [Childchain API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/operator_api_swagger.json)
 
 ### Documentation
 

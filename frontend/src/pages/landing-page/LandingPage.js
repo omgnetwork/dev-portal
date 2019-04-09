@@ -211,7 +211,7 @@ const LandingPage = () => {
               title="Watcher Informational API"
               subTitle={'API for common interactions:\n balance query, making transactions'}
               action={{
-                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=informational_api_swagger.json',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml',
                 text: 'Learn more'
               }}
             />
@@ -220,7 +220,7 @@ const LandingPage = () => {
               title="Watcher Security Critical API"
               subTitle={'Plasma exit operations API'}
               action={{
-                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=watcher_api_swagger.json',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml',
                 text: 'Learn more'
               }}
             />
@@ -229,7 +229,7 @@ const LandingPage = () => {
               title="Childchain API"
               subTitle={'Get block data to implement your own watcher'}
               action={{
-                href: 'https://omisego.github.io/elixir-omg/docs-ui/?url=operator_api_swagger.json',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/operator_api_swagger.json',
                 text: 'Learn more'
               }}
             />
