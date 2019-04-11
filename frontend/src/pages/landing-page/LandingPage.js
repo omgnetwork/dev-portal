@@ -14,7 +14,7 @@ const carouselContent = [
   {
     preTitle: 'OmiseGO Developer Portal',
     title: 'Build Scalable Decentralized\nPayment Apps',
-    subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety gaurantees',
+    subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety guarantees',
     buttonTitle: 'Get Started',
     imagePath: '/img/00-hero.png',
     href: 'https://github.com/omisego/dev-portal/tree/master/guides/get_started.md'
