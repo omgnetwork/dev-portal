@@ -4,11 +4,11 @@ Estimated time: 5 minutes
 
 Goal:
 
-- To understand plasma transactionss from end-to-end
+- To understand plasma transactions from end-to-end
 - To get first hand experience in making interactions with plasma
 - To learn the process of making `deposit`, `transact` and `exit`
 
-In this guide, we will introduce you the Plasma Interface by making transactions directly from your browser. Just make sure you have `Git` installed and have access to code editor. No need to install any dependencies.
+In this guide, we will introduce to you the Plasma Interface by making transactions directly from your browser. Just make sure you have `Git` installed and have access to a code editor. No need to install any dependencies.
 
 ### Initial Setup
 1. Clone `js-starter-kit` onto your local machine. The repo can be found here https://github.com/omisego/js-starter-kit
@@ -39,4 +39,4 @@ In this guide, we will introduce you the Plasma Interface by making transactions
 
 #### 4. Exit
 
-4.1. Once you are done, simply putting the address of the funds you would like to exit and click on [exit]
+4.1. Once you are done, simply put the address of the funds you would like to exit and click on [exit]
