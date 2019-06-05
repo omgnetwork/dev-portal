@@ -10,6 +10,7 @@ const XCard = styled.div`
   padding: 1.5rem;
   border: 2px solid ${props => props.theme.secondary};
   border-radius: ${props => props.theme.borderRadius};
+  background-color: white;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 

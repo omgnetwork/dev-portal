@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 import { smoothScroll } from 'utils/scroll';
 
-import Button from 'components/Button';
-import Typography from 'components/Typography';
-
 const XCarouselWrapper = styled.div`
   position: relative;
 `;
@@ -17,15 +14,20 @@ const XCarouselContainer = styled.div`
 `;
 
 const XCarouselItem = styled.div`
+  position: relative;
   width: 100%;
+  /* height: 450px; */
   box-sizing: border-box;
   display: flex;
   flex: 1 0 100%;
   justify-content: center;
-  padding: 6rem 1.5rem 0 1.5rem;
-  background-color: ${props => props.theme.secondary};
+  padding: 6rem 1.5rem;
+  background-size: cover;
+  background-image: ${props => props.backgroundPath
+    ? `url(${props.backgroundPath})`
+    : 'linear-gradient(#FCFCFD, #F0F2F5)'};
 
-  @media (max-width: 910px) {
+  @media (max-width: 1000px) {
     padding: 6rem 1.5rem;
     .right {
       display: none;
@@ -39,21 +41,20 @@ const XCarouselItem = styled.div`
   .carousel-content {
     display: flex;
     flex-direction: row;
+    width: ${props => props.theme.pageWidth};
     max-width: ${props => props.theme.pageWidth};
-
     .left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex: 1 1 auto;
-    }
-
-    .right {
       width: 50%;
-      transform: translateY(-70px);
-      img {
-        width: 95%;
+      @media ${props => props.theme.tabletBreak} {
+        width: 100%;
       }
+    }
+    .right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 50%;
     }
   }
 
@@ -64,25 +65,25 @@ const XCarouselItem = styled.div`
 
 const XCarouselPager = styled.div`
   position: absolute;
-  bottom: 40px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   flex-direction: row;
+  z-index: 2;
 `;
 
 const XCarouselPagerItem = styled.div`
   background-color: ${props => 
     props.active
-      ? props.theme.darkGray
+      ? props.theme.primary
       : props.theme.mediumGray
   };
-  width: 17px;
+  width: 35px;
   height: 5px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 15px;
+  margin-right: 10px;
   transition: all 300ms ease-in-out;
   :last-child {
     margin-right: 0px;
@@ -97,7 +98,7 @@ const Carousel = ({ content }) => {
   useEffect(() => {
     setWidth(node.current.clientWidth);
     window.addEventListener('resize', handleResize);
-    const carouselInterval = setInterval(gotoPosition, 5000);
+    const carouselInterval = setInterval(gotoPosition, 10000);
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -122,7 +123,6 @@ const Carousel = ({ content }) => {
     smoothScroll(node, amountToScroll, 400);
     setPosition(newPosition);
   }
-  
 
   return (
     <XCarouselWrapper>
@@ -140,26 +140,14 @@ const Carousel = ({ content }) => {
         )}
 
         {content.map((item, index) => (
-          <XCarouselItem key={index}>
+          <XCarouselItem
+            key={index}
+            backgroundPath={item.backgroundPath}
+            darkTheme={!!item.darkTheme}
+          >
             <div className='carousel-content'>
-              <div className='left'>
-                <Typography className='carousel-text' size='L'>
-                  {item.preTitle}
-                </Typography>
-                <Typography className='carousel-text' size='XL' bold>
-                  {item.title}
-                </Typography>
-                <Typography className='carousel-text' color='text'>
-                  {item.subTitle}
-                </Typography>
-                <Button href={item.href}>
-                  {item.buttonTitle}
-                </Button>
-              </div>
-
-              <div className='right'>
-                <img src={process.env.PUBLIC_URL + item.imagePath} alt='hero' />
-              </div>
+              <div className='left'>{item.left}</div>
+              <div className='right'>{item.right}</div>
             </div>
           </XCarouselItem>
         ))}
