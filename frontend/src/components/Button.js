@@ -9,6 +9,7 @@ const XButton = styled.div`
   background-color: ${props => props.theme.primary};
   border-radius: ${props => props.theme.borderRadius};
   transition: all 200ms ease-in-out;
+  display: inline-flex;
 
   a {
     color: ${props => props.theme.background};

@@ -11,13 +11,14 @@ const light = {
   dark: '#03060b',
   success: '#0fbf99',
   warning: '#fb7166',
+  white: 'white',
 
   pageWidth: '1000px',
   contentWidth: '800px',
-  boxShadow: '0px 2px 10px 0px rgba(0,0,0,0.10)',
+  boxShadow: '0px 2px 10px 0px rgba(0,0,0,0.15)',
   borderRadius: '5px',
   mobileBreak: '(max-width: 650px)',
-  tabletBreak: '(max-width: 910px)',
+  tabletBreak: '(max-width: 1000px)',
   isNotMobile: '(min-width: 651px)',
 };
 

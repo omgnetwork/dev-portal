@@ -10,34 +10,25 @@ import Divider from 'components/Divider';
 import Bookmark from 'components/Bookmark';
 import Link from 'components/Link';
 
+import JoinLeft from './carousel/JoinLeft';
+import JoinRight from './carousel/JoinRight';
+import SamrongLeft from './carousel/SamrongLeft';
+import SamrongRight from './carousel/SamrongRight';
+
 const carouselContent = [
   {
-    preTitle: 'OmiseGO Developer Portal',
-    title: 'Build Scalable Decentralized\nPayment Apps',
-    subTitle: 'Leverage Plasma architecture to build a layer two application with\nhigh throughput and strong safety guarantees',
-    buttonTitle: 'Get Started',
-    imagePath: '/img/00-hero.png',
-    href: 'https://github.com/omisego/dev-portal/tree/master/guides/get_started.md'
+    left: <JoinLeft />,
+    right: <JoinRight />
   },
-  // {
-  //   preTitle: 'OmiseGO Developer Portal',
-  //   title: 'Build Scalable Payment dApps',
-  //   subTitle: 'Plug into the OMG network to scale your decentralized\napplications while rooting',
-  //   buttonTitle: 'Get Started',
-  //   imagePath: '00-hero2.png',
-  //   href: ''
-  // },
-  // {
-  //   preTitle: 'OmiseGO Developer Portal',
-  //   title: 'Build High Throughput\nPayment dApps',
-  //   subTitle: 'Integrate your decentralized application with the OMG network to\nachieve high throughput and and lower fees while maintaining strong\nsecurity of funds',
-  //   buttonTitle: 'Get Started',
-  //   imagePath: '00-hero2.png',
-  //   href: ''
-  // },
+  {
+    darkTheme: true,
+    backgroundPath: '/img/samrong-background.png',
+    left: <SamrongLeft />,
+    right: <SamrongRight />
+  }
 ];
 
-const XLayout = styled.div`
+const XSection = styled.div`
   max-width: ${props => props.theme.contentWidth};
   padding: 0 1.5rem;
   margin: 0 auto;
@@ -47,9 +38,12 @@ const XCards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0;
+  padding: 20px 0 80px 0;
+  position: relative;
+  background: radial-gradient(100% 400px ellipse at 50% 100%, #F7F8FA, #FFFFFF);
 
   .cards {
+    max-width: ${props => props.theme.contentWidth};
     display: flex;
     flex-direction: row;
     padding-top: 2rem;
@@ -133,7 +127,7 @@ const XCTA = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 80px;
+  padding-top: 80px;
 
   @media ${props => props.theme.mobileBreak} {
     align-items: center;
@@ -154,48 +148,67 @@ const LandingPage = () => {
   return (
     <Page>
       <Carousel content={carouselContent} />
-      <XLayout>
-        <XCards>
-          <Typography bold size='L'>
-            Getting Started
-          </Typography>
 
-          <div className='cards'>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/morevp_eli5.md">
-              <Card>
-                <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
-                <XCardNumber><span>1</span></XCardNumber>
-                <XCardText>
-                  <Typography bold>Learn MoreVP Architecture</Typography>
-                </XCardText>
-                <Typography color='text'>Understand MoreVP Plasma architecture and how it works under the hood</Typography>
-              </Card>
-            </Link>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_interface_from_browser.md">
-              <Card>
-                <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
-                <XCardNumber><span>2</span></XCardNumber>
-                <XCardText>
-                  <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
-                </XCardText>
-                <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
-              </Card>
-            </Link>
-            <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md">
-              <Card>
-                <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
-                <XCardNumber><span>3</span></XCardNumber>
-                <XCardText>
-                  <Typography bold>Making sense of UTXOs</Typography>
-                </XCardText>
-                <Typography color='text'>Start making more complex Plasma transactions from your terminal</Typography>
-              </Card>
-            </Link>
-          </div>
-        </XCards>
+      <XSection>
+        <XCTA>
+          <span>
+            <Typography center bold size='XL'>
+              Build Scalable Decentralized Payment Apps
+            </Typography>
+          </span>
+          <span>
+            <Typography center color='text'>
+              {`Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees`}
+            </Typography>
+          </span>
+          <span>
+            <Button href="https://github.com/omisego/dev-portal/tree/master/guides/get_started.md">
+              Get Started Now
+            </Button>
+          </span>
+        </XCTA>
+      </XSection>
 
+      <XCards>
+        <div className='cards'>
+          <Link href="https://github.com/omisego/dev-portal/blob/master/guides/morevp_eli5.md">
+            <Card>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/01-plasmaarchitecture.png'} alt='morevp'/>
+              <XCardNumber><span>1</span></XCardNumber>
+              <XCardText>
+                <Typography bold>Learn MoreVP Architecture</Typography>
+              </XCardText>
+              <Typography color='text'>Understand MoreVP Plasma architecture and how it works under the hood</Typography>
+            </Card>
+          </Link>
+          <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_interface_from_browser.md">
+            <Card>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/02-plasmainterface.png'} alt='plasma'/>
+              <XCardNumber><span>2</span></XCardNumber>
+              <XCardText>
+                <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
+              </XCardText>
+              <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
+            </Card>
+          </Link>
+          <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md">
+            <Card>
+              <XCardImage src={process.env.PUBLIC_URL + '/img/03-utxo.png'} alt='utxo'/>
+              <XCardNumber><span>3</span></XCardNumber>
+              <XCardText>
+                <Typography bold>Making sense of UTXOs</Typography>
+              </XCardText>
+              <Typography color='text'>Start making more complex Plasma transactions from your terminal</Typography>
+            </Card>
+          </Link>
+        </div>
+      </XCards>
+
+      <XSection>
         <Divider />
+      </XSection>
 
+      <XSection>
         <XBookmarks>
           <div className='bookmark-column'>
             <div className='bookmark-intro'>
@@ -273,25 +286,7 @@ const LandingPage = () => {
             />
           </div>
         </XBookmarks>
-
-        <XCTA>
-          <span>
-            <Typography center bold size='XL'>
-              Join the OmiseGO Developer Program
-            </Typography>
-          </span>
-          <span>
-            <Typography center color='text'>
-              {`Be the first to know about all the development updates and get the chance to\ntry out the latest features, tools, and libraries, plus the chance\nto talk to the OmiseGO Product and Engineering teams.`}
-            </Typography>
-          </span>
-          <span>
-            <Button href="https://omisego-odp.typeform.com/to/T8dDjF">
-              Sign Up Now
-            </Button>
-          </span>
-        </XCTA>
-      </XLayout>
+      </XSection>
     </Page>
   );
 }
