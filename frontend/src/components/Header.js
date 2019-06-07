@@ -68,7 +68,7 @@ const XHeader = styled.div`
 const menuItems = [
   {
     title: 'Block Explorer',
-    href: 'http://quest.omg.network'
+    href: 'http://quest.samrong.omg.network'
   },
   {
     title: 'API Specification',
