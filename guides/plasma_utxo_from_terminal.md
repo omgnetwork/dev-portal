@@ -14,9 +14,9 @@ Unlike Ethereum, a plasma chain units of transactions are in UTXOs aka Unspent T
 
 If you haven't already, make sure you have gone through the first Guide on [Running Plasma Transactions on the browser](https://github.com/omisego/dev-portal/blob/master/guides/browser_plasma_interface.md).
 
-### UTXOs ELI-5
+### Note
 
-*TODO*
+This guide is meant for **Ari** and any v0.1 instance of OMG Network
 
 ### Managing Complex UTXOs
 
