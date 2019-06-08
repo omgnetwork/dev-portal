@@ -10,6 +10,7 @@ const XPage = styled.div`
   min-height: 100vh;
 
   .page-child {
+    z-index: 0;
     flex: 1 1 auto;
     margin-top: 85px;
   }
