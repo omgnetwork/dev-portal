@@ -3,11 +3,11 @@
 ## Network endpoints
 
 ```
-CHILDCHAIN_URL: “http://samrong.omg.network/”
+CHILDCHAIN_URL: 'http://samrong.omg.network/'
 
-WATCHER_URL: “http://watcher.samrong.omg.network/”
+WATCHER_URL: 'http://watcher.samrong.omg.network/'
 
-WEB3_PROVIDER_URL: "https://rinkeby.infura.io/"
+WEB3_PROVIDER_URL: 'https://rinkeby.infura.io/'
 (or any IPC Provider)
 ```
 
