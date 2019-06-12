@@ -23,7 +23,7 @@ This guide is meant for **Samrong** and any v0.2 instance of OMG Network
 
 2. Open up the `config.js` on your text editor
 
-3. Replace the current configs in `omg-wallet.js` with the  [following Network Endpoints for Samrong](https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md) then save the file.
+3. Replace the current configs in `config.js` with the  [following Network Endpoints for Samrong](https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md) then save the file.
 
 4. install all the dependencies `npm install`
 
