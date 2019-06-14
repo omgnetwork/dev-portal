@@ -52,7 +52,7 @@ Now that you have Alice's account, we will to fund it with some ETH. Go ahead an
 Let's try to deposit to the Rootchain contract now. Run the following command to deposit 4000 wei to Alice's wallet:
 
 ```
-./plasma_cli deposit --privatekey="alice_private_key" --client="https://rinkeby.infura.io" --contract="0x44de0ec539b8c4a4b530c78620fe8320167f2f74" --owner="alice_address" --amount=4000 --currency="ETH"
+./plasma_cli deposit --privatekey="alice_private_key" --client="https://rinkeby.infura.io" --contract="0x740ecec4c0ee99c285945de8b44e9f5bfb71eea7" --owner="alice_address" --amount=4000 --currency="ETH"
 ```
 
 Don't forget to wait for transaction confirmation. After around two minutes, you should be able to see your UTXO on the plasma chain. Let's try to query your new UTXO:
