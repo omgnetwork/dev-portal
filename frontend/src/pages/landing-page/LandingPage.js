@@ -188,7 +188,7 @@ const LandingPage = () => {
               <XCardText>
                 <Typography bold>{`Get to know\nthe Plasma Interface`}</Typography>
               </XCardText>
-              <Typography color='text'>Making interactions with the OMG Network APIs from the browser</Typography>
+              <Typography color='text'>Making interactions with the OmiseGO Network APIs from the browser</Typography>
             </Card>
           </Link>
           <Link href="https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md">
@@ -216,7 +216,7 @@ const LandingPage = () => {
                 APIs
               </Typography>
               <Typography color='text'>
-                Explore and interact with OMG Network APIs
+                Explore and interact with OmiseGO Network APIs
               </Typography>
             </div>
             <Bookmark
@@ -259,7 +259,7 @@ const LandingPage = () => {
             </div>
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/07-omgnetwork.png'}
-              title="OMG Network"
+              title="OmiseGO Network"
               subTitle={'Documentation for OMG\nnetwork'}
               action={{
                 href: 'https://github.com/omisego/elixir-omg/blob/master/README.md',

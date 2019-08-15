@@ -12,7 +12,7 @@ const SamrongLeft = () => {
   return (
     <XSamrong>
       <Typography className='carousel-text' size='XL' color='white' bold>
-        {'Next Station Samrong:\nOMG Network v0.2'}
+        {'Next Station Samrong:\nOmiseGO Network v0.2'}
       </Typography>
       <Typography className='carousel-text' color='white'>
         {'Ready to upgrade from Ari to Samrong?'}

@@ -124,7 +124,7 @@ const Footer = () => {
           <span className='footer-item'>
             <Link href='https://github.com/omisego/elixir-omg/blob/master/README.md'>
               <Typography color='footerText' size='S'>
-                {`OMG Network`}
+                {`OmiseGO Network`}
               </Typography>
             </Link>
           </span>
@@ -187,8 +187,8 @@ const Footer = () => {
             <Link href='https://twitter.com/omise_go'>
               <img src={process.env.PUBLIC_URL + '/img/twitter.svg'} alt='twitter' className='social' />
             </Link>
-            <Link href='https://www.facebook.com/OmiseGO/'>
-              <img src={process.env.PUBLIC_URL + '/img/facebook.svg'} alt='facebook' className='social' />
+            <Link href='https://github.com/omisego'>
+              <img src={process.env.PUBLIC_URL + '/img/github.svg'} alt='github' className='social' />
             </Link>
           </span>
 
