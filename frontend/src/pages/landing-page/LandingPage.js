@@ -260,7 +260,7 @@ const LandingPage = () => {
             <Bookmark
               image={process.env.PUBLIC_URL + '/img/07-omgnetwork.png'}
               title="OmiseGO Network"
-              subTitle={'Documentation for OMG\nnetwork'}
+              subTitle={'Documentation for OmiseGO\nnetwork'}
               action={{
                 href: 'https://github.com/omisego/elixir-omg/blob/master/README.md',
                 text: 'Learn more'
