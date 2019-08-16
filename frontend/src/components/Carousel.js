@@ -107,8 +107,12 @@ const Carousel = ({ content }) => {
   });
   
   const handleResize = () => {
-    setWidth(node.current.clientWidth);
-    gotoPosition(position);
+    const currentWidth = node.current.clientWidth;
+    setWidth(currentWidth);
+
+    const amountToScroll = currentWidth * position;
+    smoothScroll(node, amountToScroll, 50);
+    setPosition(position);
   }
 
   const gotoPosition = (newPosition) => {
@@ -119,7 +123,7 @@ const Carousel = ({ content }) => {
         : 0
     }
 
-    const amountToScroll = width * (newPosition - position);      
+    const amountToScroll = width * (newPosition - position);
     smoothScroll(node, amountToScroll, 400);
     setPosition(newPosition);
   }
