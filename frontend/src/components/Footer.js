@@ -181,14 +181,20 @@ const Footer = () => {
           </span>
 
           <span className='footer-item'>
-            <Link href='https://reddit.com/r/omise_go/'>
-              <img src={process.env.PUBLIC_URL + '/img/reddit.svg'} alt='reddit' className='social' />
-            </Link>
             <Link href='https://twitter.com/omise_go'>
               <img src={process.env.PUBLIC_URL + '/img/twitter.svg'} alt='twitter' className='social' />
             </Link>
+            <Link href='https://www.linkedin.com/company/omisego/'>
+              <img src={process.env.PUBLIC_URL + '/img/linkedin.svg'} alt='linkedin' className='social' />
+            </Link>
             <Link href='https://github.com/omisego'>
               <img src={process.env.PUBLIC_URL + '/img/github.svg'} alt='github' className='social' />
+            </Link>
+            <Link href='https://reddit.com/r/omise_go/'>
+              <img src={process.env.PUBLIC_URL + '/img/reddit.svg'} alt='reddit' className='social' />
+            </Link>
+            <Link href='https://www.youtube.com/channel/UC-NfGRxTkJfVbFgyJoOxzCQ'>
+              <img src={process.env.PUBLIC_URL + '/img/youtube.svg'} alt='youtube' className='social' />
             </Link>
           </span>
 
