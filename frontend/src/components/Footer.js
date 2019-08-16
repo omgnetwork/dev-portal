@@ -158,7 +158,7 @@ const Footer = () => {
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='https://omisego.network/'>
+            <Link href='https://omisego.co/'>
               <Typography color='footerText' size='S'>
                 {`OmiseGO`}
               </Typography>
