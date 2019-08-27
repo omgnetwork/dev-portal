@@ -21,8 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
+  title: 'OmiseGO Docs', // Title for your website.
+  tagline: 'Developer documentation for OmiseGO',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -54,7 +54,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#96205b',
+    /* primaryColor: '#96205b', */
+    primaryColor: "#2176ff",
     secondaryColor: '#69163f',
   },
 
