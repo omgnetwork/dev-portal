@@ -4,8 +4,8 @@
       "welcome",
     "glossary"
   ],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "OmiseGO Network": ["doc2"],
+    "eWallet Suite": ["doc3"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
