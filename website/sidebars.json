@@ -5,7 +5,9 @@
     "glossary"
   ],
     "OmiseGO Network": ["welcome"],
-    "eWallet Suite": ["doc3"]
+    "eWallet Suite": ["ewallet-overview"],
+    "elixir-omg": ["contribute-elixir-omg"],
+    "plasma-contracts": ["contribute_plasma-contracts"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

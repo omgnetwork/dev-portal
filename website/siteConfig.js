@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'OmiseGO Docs', // Title for your website.
-  tagline: 'Developer documentation for OmiseGO',
+  tagline: 'Developer documentation for OmiseGO - Unstoppable financial infrastructure',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -30,8 +30,8 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'facebook',
+  projectName: 'omisego',
+  organizationName: 'omisego',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -75,8 +75,19 @@ const siteConfig = {
   },
   */
 
+ fonts: {
+  myFont: [
+    "Verdana",
+    "Serif"
+  ],
+  myOtherFont: [
+    "-apple-system",
+    "system-ui"
+  ]
+},
+
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} OmiseGO`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -98,6 +109,7 @@ const siteConfig = {
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
   // docsSideNavCollapsible: true,
+  docsSideNavCollapsible: true,
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
