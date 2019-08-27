@@ -31,8 +31,9 @@
     },
     "categories": {
       "Home": "Home",
-      "First Category": "First Category",
-      "Second Category": "Second Category"
+      "OmiseGO Network": "OmiseGO Network",
+      "eWallet Suite": "eWallet Suite",
+      "First Category": "First Category"
     }
   },
   "pages-strings": {
