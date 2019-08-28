@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "Developer documentation for OmiseGO - Unstoppable financial infrastructure",
     "docs": {
       "doc3": {
         "title": "This is document number 3"
@@ -33,6 +33,8 @@
       "Home": "Home",
       "OmiseGO Network": "OmiseGO Network",
       "eWallet Suite": "eWallet Suite",
+      "elixir-omg": "elixir-omg",
+      "plasma-contracts": "plasma-contracts",
       "First Category": "First Category"
     }
   },

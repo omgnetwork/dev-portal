@@ -35,18 +35,18 @@ class Footer extends React.Component {
               />
             )}
           </a>
-          <div>
+        <div>
             <h5>Docs</h5>
             <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+              Getting Started  
             </a>
             <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+              Guides
             </a>
             <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+              API Reference
             </a>
-          </div>
+          </div>  
           <div>
             <h5>Community</h5>
             <a href={this.pageUrl('users.html', this.props.language)}>
@@ -65,7 +65,7 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Twitter
             </a>
-          </div>
+          </div> 
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
@@ -89,7 +89,7 @@ class Footer extends React.Component {
                   className="twitter-follow-button">
                   Follow @{this.props.config.twitterUsername}
                 </a>
-              </div>
+              </div> 
             )}
             {this.props.config.facebookAppId && (
               <div className="social">
@@ -104,7 +104,7 @@ class Footer extends React.Component {
                 />
               </div>
             )}
-          </div>
+          </div> 
         </section>
 
         <a
