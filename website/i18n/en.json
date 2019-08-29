@@ -19,6 +19,10 @@
         "title": "Glossary",
         "sidebar_label": "Glossary"
       },
+      "integrate-the-eWallet-server": {
+        "title": "Integrate the eWallet server",
+        "sidebar_label": "Integrate the eWallet server"
+      },
       "welcome": {
         "title": "Welcome to OmiseGO!",
         "sidebar_label": "Welcome to OmiseGO!"
