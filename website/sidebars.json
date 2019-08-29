@@ -1,10 +1,13 @@
 {
   "docs": {
     "Home": [
-      "welcome",
+      "getting-started",
     "glossary"
   ],
-    "OmiseGO Network": ["welcome"],
+    "OmiseGO Network": [
+      "overview-omg-network",
+      
+    ],
     "eWallet Suite": ["ewallet-overview"],
     "elixir-omg": ["contribute-elixir-omg"],
     "plasma-contracts": ["contribute_plasma-contracts"]

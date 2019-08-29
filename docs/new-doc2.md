@@ -1,29 +1,31 @@
 ---
-id: welcome
-title: Welcome to OmiseGO!
-sidebar_label: Welcome to OmiseGO!
+id: send-your-first-transaction
+title: Send your first transaction
+sidebar_label: Send your first transaction
 ---
 
 
-## About OmiseGO
+## Introduction
 
-OmiseGO's mission and vision is to enable open and accessible financial services that is fast, fair and secure. Our goal is large. We want to become the standard backbone infrastructure that underpins a healthy, open and accessible financial services ecosystem.
+This guide introduces you to the Plasma interface and shows you how to make transactions directly from a browser.
 
-OmiseGO is an impact driven company that builds on blockchain to enable access to financial services that are fast, fair & secure.
+* Learn about plasma transactions from end-to-end.
+* Gain practical experience interacting with Plasma.
+* Make a deposit, transact and exit.
 
-OmiseGO Network enables people to securely access financial services, invest, exchange, and spend digital assets anytime, anywhere.
+⋅⋅⋅Note: This guide is intended for **Samrong** and any v0.2 instance of OmiseGO Network.
 
+|Read this first!
+|
+|The OMG token contract follows the ERC20 standard, which means OMG is decentralised and the contract owner has no control over it.
+|
+|Only you can keep your tokens safe. Please ensure you understand how to safely store and send tokens before making any transactions, always double check that you are sending to the correct address, and never send your private keys to anyone. Anyone who has your private keys can, and probably will, take your money.
 
+|If you've sent your tokens to ...
 
-A scaling solution for Ethereum focused on enabling payments, trades, and other nancial transactions in both crypto and at.
+The OMG smart contract address
 
-
-
-Develop the OMG open-source, white label digital wallet Software Development Kit (SDK). The SDK will be free for anyone to use and will make it easy for those who need online asset exchange as part of their business to connect seamlessly to the OMG Network. The SDK allows wallet providers the exibility to enhance, add, and customize payment solutions for many use cases.
-
-
-
-OMG offers mainstream end-customers an introduction to the many benets of blockchain technology—the wallet SDK will make it easy to create dapps that let the end user take advantage of Ethereum’s immense potential without ha
-
-[https://omisego.to/disclaimer](https://omisego.to/disclaimer)
-
+It's not possible to make transactions from the contract address; your tokens are lost to all
+The wrong token address on an exchange	You can try contacting the exchange with the details of your transaction, but OmiseGO has no power to reverse the transaction or force the exchange to return your tokens.
+A scammer	There's nothing we can do to get your tokens back. We do our best to report scam accounts, so feel free to let us know if you see a suspicious account or website, but we can’t catch them all and can’t take responsibility for their actions.
+Some other address that you don’t have access to	No one except the holder of the private keys associated with that address will be able to help you get your tokens back. Unless the person who received them is exceptionally honest and decides to give them back, those tokens are lost for good.

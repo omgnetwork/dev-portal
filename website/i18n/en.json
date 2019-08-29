@@ -14,6 +14,10 @@
       "doc5": {
         "title": "Fifth Document"
       },
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
       "glossary": {
         "title": "Glossary",
         "sidebar_label": "Glossary"
