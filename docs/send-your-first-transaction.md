@@ -15,11 +15,19 @@ This guide introduces you to the Plasma interface and shows you how to make tran
 
 ⋅⋅⋅Note: This guide is intended for **Samrong** and any v0.2 instance of OmiseGO Network.
 
-|Read this first!
-|
-|The OMG token contract follows the ERC20 standard, which means OMG is decentralised and the contract owner has no control over it.
-|
-|Only you can keep your tokens safe. Please ensure you understand how to safely store and send tokens before making any transactions, always double check that you are sending to the correct address, and never send your private keys to anyone. Anyone who has your private keys can, and probably will, take your money.
+
+Read this first!               
+|First Header   | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+
+
+The OMG token contract follows the ERC20 standard, which means OMG is decentralised and the contract owner has no control over it.
+
+Only you can keep your tokens safe. Please ensure you understand how to safely store and send tokens before making any transactions, always double check that you are sending to the correct address, and never send your private keys to anyone. Anyone who has your private keys can, and probably will, take your money.
 
 |If you've sent your tokens to ...
 
