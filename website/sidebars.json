@@ -16,12 +16,13 @@
         "type": "subcategory",
         "label": "OmiseGO eWallet",
         "ids": [
-          "some-other-examples"
+          "integrate-the-eWallet-server"
         ]
       },
       "even-more-examples"
      
     ]
-    
   }
+  
+
 }
