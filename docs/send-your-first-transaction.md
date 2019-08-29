@@ -13,7 +13,7 @@ This guide introduces you to the Plasma interface and shows you how to make tran
 * Gain practical experience interacting with Plasma.
 * Make a deposit, transact and exit.
 
-⋅⋅⋅Note: This guide is intended for **Samrong** and any v0.2 instance of OmiseGO Network.
+> This guide is intended for **Samrong** and any v0.2 instance of OmiseGO Network.
 
 
 Read this first!               

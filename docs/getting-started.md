@@ -1,7 +1,7 @@
 ---
-id: getting-started
-title: Getting Started
-sidebar_label: Getting Started
+id: about-omisego
+title: About OmiseGO
+sidebar_label: About OmiseGO
 ---
 
 Welcome to the OmiseGO developer documentation.
