@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Developer documentation for OmiseGO - Unstoppable financial infrastructure",
     "docs": {
+      "api-responsibilities": {
+        "title": "API Responsibilities",
+        "sidebar_label": "API Responsibilities"
+      },
       "doc4": {
         "title": "Other Document"
       },
