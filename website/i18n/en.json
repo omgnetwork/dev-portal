@@ -5,8 +5,9 @@
     "previous": "Previous",
     "tagline": "Developer documentation for OmiseGO - Unstoppable financial infrastructure",
     "docs": {
-      "doc3": {
-        "title": "This is document number 3"
+      "api-responsibilities": {
+        "title": "API Responsibilities",
+        "sidebar_label": "API Responsibilities"
       },
       "doc4": {
         "title": "Other Document"
@@ -14,28 +15,37 @@
       "doc5": {
         "title": "Fifth Document"
       },
+      "about-omisego": {
+        "title": "About OmiseGO",
+        "sidebar_label": "About OmiseGO"
+      },
       "glossary": {
         "title": "Glossary",
         "sidebar_label": "Glossary"
       },
+      "integrate-the-eWallet-server": {
+        "title": "Integrate the eWallet server",
+        "sidebar_label": "Integrate the eWallet server"
+      },
       "welcome": {
         "title": "Welcome to OmiseGO!",
         "sidebar_label": "Welcome to OmiseGO!"
+      },
+      "overview-omg-network": {
+        "title": "Overview"
+      },
+      "send-your-first-transaction": {
+        "title": "Send your first transaction",
+        "sidebar_label": "Send your first transaction"
       }
     },
     "links": {
       "Docs": "Docs",
-      "API": "API",
-      "Help": "Help",
-      "Blog": "Blog"
+      "OmiseGO.co": "OmiseGO.co",
+      "OmiseGO Network API Docs": "OmiseGO Network API Docs"
     },
     "categories": {
-      "Home": "Home",
-      "OmiseGO Network": "OmiseGO Network",
-      "eWallet Suite": "eWallet Suite",
-      "elixir-omg": "elixir-omg",
-      "plasma-contracts": "plasma-contracts",
-      "First Category": "First Category"
+      "OmiseGO Docs": "OmiseGO Docs"
     }
   },
   "pages-strings": {

@@ -39,11 +39,13 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'welcome', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    // {doc: 'doc4', label: 'API'},
+    // {page: 'help', label: 'Help'},
+    // {blog: true, label: 'Blog'},
+    { href: 'https://omisego.co/', external: true, label: 'OmiseGO.co' },
+    { href: 'https://developer.omisego.co/elixir-omg/', external: true, label: 'OmiseGO Network API Docs' },
   ],
-
+  
   // If you have users set above, you add it here:
   users,
 
@@ -61,11 +63,9 @@ const siteConfig = {
   
   },
 
-  /* Custom fonts for website */
-  /*
-  fonts: {
+  _fonts: {
     myFont: [
-      "Times New Roman",
+      "Verdana",
       "Serif"
     ],
     myOtherFont: [
@@ -73,18 +73,12 @@ const siteConfig = {
       "system-ui"
     ]
   },
-  */
-
- fonts: {
-  myFont: [
-    "Verdana",
-    "Serif"
-  ],
-  myOtherFont: [
-    "-apple-system",
-    "system-ui"
-  ]
-},
+ get fonts() {
+   return this._fonts;
+ },
+ set fonts(value) {
+   this._fonts = value;
+ },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} OmiseGO`,

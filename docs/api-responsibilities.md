@@ -1,7 +1,7 @@
 ---
-id: welcome
-title: Welcome to OmiseGO!
-sidebar_label: Welcome to OmiseGO!
+id: api-responsibilities
+title: API Responsibilities
+sidebar_label: API Responsibilities
 ---
 
 

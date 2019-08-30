@@ -1,15 +1,29 @@
 {
   "docs": {
-    "Home": [
+    "OmiseGO Docs": [
       "welcome",
-    "glossary"
-  ],
-    "OmiseGO Network": ["welcome"],
-    "eWallet Suite": ["ewallet-overview"],
-    "elixir-omg": ["contribute-elixir-omg"],
-    "plasma-contracts": ["contribute_plasma-contracts"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+      "glossary",
+      {
+        "type": "subcategory",
+        "label": "OmiseGO Network",
+        "ids": [
+          "overview-omg-network",
+          "send-your-first-transaction"
+          
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OmiseGO eWallet",
+        "ids": [
+          "integrate-the-eWallet-server",
+          "api-responsibilities"
+        ]
+      },
+      "even-more-examples"
+     
+    ]
   }
+  
+
 }
