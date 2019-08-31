@@ -17,10 +17,10 @@ To learn more about OmiseGO's network architecture and what you can build with i
 
 - Childchain API : https://developer.omisego.co/elixir-omg/docs-ui/?url=master/operator_api_specs.yaml
 
-Documentation
+<!-- Documentation
 OMG Network Docs
 
 OMG-JS Docs
 
-Plasma CLI Docs
+Plasma CLI Docs -->
 

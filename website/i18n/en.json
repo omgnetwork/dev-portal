@@ -10,10 +10,7 @@
         "sidebar_label": "API Responsibilities"
       },
       "doc4": {
-        "title": "Other Document"
-      },
-      "doc5": {
-        "title": "Fifth Document"
+        "title": "This is Doc 4"
       },
       "about-omisego": {
         "title": "About OmiseGO",
@@ -26,6 +23,12 @@
       "integrate-the-eWallet-server": {
         "title": "Integrate the eWallet server",
         "sidebar_label": "Integrate the eWallet server"
+      },
+      "introduction-plasma-more-vp": {
+        "title": "Introduction to Plasma (MoreVP)"
+      },
+      "morevp-technical-overview": {
+        "title": "MoreVP Technical Overview"
       },
       "welcome": {
         "title": "Welcome to OmiseGO!",

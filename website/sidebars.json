@@ -8,7 +8,9 @@
         "label": "OmiseGO Network",
         "ids": [
           "overview-omg-network",
-          "send-your-first-transaction"
+          "send-your-first-transaction",
+          "introduction-plasma-more-vp",
+          "morevp-technical-overview"
           
         ]
       },
