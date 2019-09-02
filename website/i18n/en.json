@@ -9,9 +9,6 @@
         "title": "API Responsibilities",
         "sidebar_label": "API Responsibilities"
       },
-      "doc4": {
-        "title": "This is Doc 4"
-      },
       "about-omisego": {
         "title": "About OmiseGO",
         "sidebar_label": "About OmiseGO"
@@ -40,6 +37,9 @@
       "send-your-first-transaction": {
         "title": "Send your first transaction",
         "sidebar_label": "Send your first transaction"
+      },
+      "the-plasma-lifecycle": {
+        "title": "The Plasma lifecycle"
       }
     },
     "links": {
