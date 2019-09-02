@@ -6,17 +6,16 @@ sidebar_label: Blockchain Design
 
 
 ## Overview
-This page describes the blockchain (consensus) design used by the first iteration of OmiseGO Plasma-based implementation. This design is a modified version of Minimal Viable Plasma design.
+This page describes the blockchain (consensus) design used by the first iteration of OmiseGO Plasma-based implementation. This design is a modified version of [Minimal Viable Plasma design](https://ethresear.ch/t/minimal-viable-plasma/426).
 
-This content assumes that you have prior knowledge of Ethereum and general familiarity with Plasma.
+> This content assumes that you have prior knowledge of Ethereum and general familiarity with Plasma.
 
 
 
 ### Tesuji Plasma architecture
-Tesuji Plasma's architecture allows cheaper transactions, with higher throughput, without sacrificing security. Users make transactions on a ChildChain, which derives its security from a RootChain. 
+Tesuji Plasma's architecture allows cheaper transactions and higher throughput, without sacrificing security. Users make transactions on a child chain that derives its security from a root chain. 
 
-ChildChain refers to a blockchain that coalesces multiple transactions into a child chain block, compacting them into a single, cheap transaction on a root chain. OmiseGO's root chain is the Ethereum blockchain.
-
+Child chain refers to a blockchain that coalesces multiple transactions into a child chain block, compacting them into a single, cheap transaction on a root chain. OmiseGO's root chain is the Ethereum blockchain.
 
 
 
@@ -24,88 +23,100 @@ ChildChain refers to a blockchain that coalesces multiple transactions into a ch
 ### About OmiseGO's blockchain design
 The key features of OmiseGO's blockchain design may be viewed as deviations from the big picture Plasma that is outlined by the original Plasma paper:
 
-Only supports transactions transferring value between addresses.
-Value transfer can take the form of an atomic swap; that is two currencies being exchanged in a single transaction (multiple currencies: Eth + ERC20).
-See also: Transactions
+1. Only supports transactions transferring value between addresses.
 
-It is a non-p2p, proof-of-authority network. 
-The ChildChain is centrally controlled by a designated, fixed Ethereum address (the ChildChain operator); other participants (that is, users) connect to the ChildChain server.
-See also: ChildChain server
+   Value transfer can take the form of an atomic swap; that is two currencies being exchanged in a single transaction (multiple currencies: Eth + ERC20).
+   See also: Transactions
 
-A single-tiered Plasma construction is employed; that is, the ChildChain doesn't serve as a parent of any chain.
+2. It is a non-p2p, proof-of-authority network. 
 
-Does not allow cheap, coordinated mass exits. 
+   The child chain is centrally controlled by a designated, fixed Ethereum address (the ChildChain operator); other participants (that is, users) connect to the ChildChain server.
+   See also: Child chain server
+
+3. Employs a single-tiered Plasma construction. That is, the child chain doesn't serve as a parent of any chain.
+
+4. Does not allow cheap, coordinated mass exits. 
 
 
 ### Security and scaleability
 Security and scaleability is built in to the design, with the following features: 
 
-Deposit funds into a contract on the RootChain.
-Make inexpensive, multiple transfers of funds deposited on the ChildChain.
-Exit any funds held on the ChildChain, and securely reclaim them on the RootChain.
-Every exit of funds held on the ChildChain must come with proof that the exit is justified. The following sections clarify the nature of such proof (that is, an attestation, or evidence justifying the exit).
+1. Deposit funds into a contract on the root chain.
+2. Make inexpensive, multiple transfers of funds deposited on the child chain.
+3. Exit any funds held on the child chain, and securely reclaim them on the root chain.
+4. Every exit of funds held on the child chain must come with proof that the exit is justified. The following sections clarify the nature of such proof (that is, an attestation, or evidence justifying the exit).
 
-### Proving a justified exit
-Exits are allowed regardless of the state of the PoA child chain. Thus, funds held on the ChildChain and on the RootChain may be treated as equivalent, provided that, if anything goes wrong on the ChildChain, everyone must exit to the RootChain.
+#### Proving a justified exit
+Exits are allowed regardless of the state of the PoA child chain. Thus, funds held on the child chain and on the root chain may be treated as equivalent, provided that, if anything goes wrong on the child chain, everyone must exit to the root chain.
 
-Plasma architecture presumes RootChain availability.  
+Plasma architecture presumes root chain availability.  
 
-The table describes the components driving the consensus:
+## Components
 
-## RootChain contract	
-Secures the ChildChain:
+The following components drive consensus: 
+* Root chain contract
+* Child chain server
+* Watcher
 
-Holds funds deposited by other addresses (users)
-Tracks ChildChain block hashes submitted that account for the funds being moved on the ChildChain
-Manages secure exiting of funds, including exits of in-flight transactions
-ChildChain server	
-Creates and submits blocks:
+### Root chain contract	
+The root chain contract secures the child chain:
 
-Collects valid transactions that move funds on the child chain
-Submits ChildChain block hashes to the RootChain contract
-Publishes contents of ChildChain blocks
-Watcher	
-Validates the ChildChain and ensures the child chain consensus mechanism is working properly:
+* Holds funds deposited by other addresses (users)
+* Tracks ChildChain block hashes submitted that account for the funds being moved on the ChildChain
+* Manages secure exiting of funds, including exits of in-flight transactions
 
-Tracks the RootChain contract, published blocks and transactions
-Reports any breach of consensus
-As an additional service, collects and stores the account information required to use the ChildChain
-As an additional service, provides a convenience API to access the ChildChain API and Ethereum. 
-Restricting access to only those times when the ChildChain is valid, provides protection for the user.
+### Child chain server	
+The child chain server creates and submits blocks:
+
+* Collects valid transactions that move funds on the child chain
+* Submits ChildChain block hashes to the RootChain contract
+* Publishes contents of ChildChain blocks
+
+### Watcher	
+Validates the child chain, ensuring the child chain consensus mechanism is working properly:
+
+* Tracks the root chain contract, published blocks and transactions
+* Reports any breach of consensus
+* As an additional service, collects and stores the account information required to use the child chain.
+* As an additional service, provides a convenience API to access the child chain API and Ethereum. 
+* Protects user by restricting access only to those times the child chain is valid
+
 All cryptographic primitives used (signatures, hashes) are understood to be ones compatible with whatever EVM uses.
 
 
 
-RootChain contract
-The ChildChain and the RootChain contract securing it manage funds using the UTXO model. See Transactions.
+## RootChain contract
+The child chain, and the root chain contract that secures it, manage funds using the UTXO model. See Transactions.
 
 ### Deposits
-Any Ethereum address may deposit ETH or ERC20 tokens into the RootChain contract. Such deposits increase the pool of funds held by the RootChain contract, and also signals to the ChildChain server that the funds should be accessible on the ChildChain.
+Any Ethereum address may deposit ETH or ERC20 tokens into the root chain contract. Deposits increase the pool of funds held by the root chain contract, and also signals to the child chain server that the funds should be accessible on the child chain.
 
-Deposited funds are recognized as a single UTXO on the ChildChain.
-The UTXO can then be spent on the ChildChain (provided that the ChildChain server follows consensus), or it can be exited immediately on the RootChain (regardless of whether ChildChain server follows consensus).
+Deposited funds are recognized as a single UTXO on the child chain. The UTXO can then be spent on the child chain (provided that the child chain server follows consensus), or it can be exited immediately on the root chain (regardless of whether child chain server follows consensus).
 
-Depositing involves forming a pseudo-block of the ChildChain. The pseudo block contains a single transaction, with the deposited funds as a new UTXO.
+Depositing involves forming a pseudo-block of the child chain. The pseudo block contains a single transaction, with the deposited funds as a new UTXO.
+
 
 ### Exits w/ exit challenges
-Exits are the most important part of the RootChain contract facilities. Exits provide the equivalence of funds sitting in the ChildChain vs funds on the RootChain.
+Exits are the most important part of the root chain contract facilities. Exits provide the equivalence of funds sitting in the child chain vs funds on the root chain.
 
 Exits must satisfy the following conditions:
+| Condition | Description |
+| ---       |   ---       |
+| E1        | Only funds represented by UTXOs that were provably included in the ChildChain may be exited. See Transactions. This means that only funds that provably existed may be exited. |
+| E2        | Attempts to exit funds that have been provably spent on the child chain, must be thwarted and punished. |
+| E3        | There must be a priority given to earlier UTXOs, for the event when the attacking ChildChain operator submits a block creating UTXOs dishonestly and attempts to exit these UTXOs. This allows all UTXOs created before the dishonest UTXOs, to exit first. |
+| E4        | In-flight funds (funds locked up in a transaction), which may or may not have not been included in the ChildChain, must be able to exit on par with funds whose inclusion is known. |
 
-E1	Only funds represented by UTXOs that were provably included in the ChildChain may be exited. See Transactions.
-This means that only funds that provably existed may be exited.
-E2	Attempts to exit funds that have been provably spent on the ChildChain, must be thwarted and punished.
-E3	There must be a priority given to earlier UTXOs, for the event when the attacking ChildChain operator submits a block creating UTXOs dishonestly and attempts to exit these UTXOs. This allows all UTXOs created before the dishonest UTXOs, to exit first.
-E4	In-flight funds (funds locked up in a transaction), which may or may not have not been included in the ChildChain, must be able to exit on par with funds whose inclusion is known.
+
 
 
 #### Submitting exit requests and challenging
-The table describes the mechanisms that satisfy conditions E1 andE2 , depending on the inclusion:
 
-Regular exit
+The following mechanisms satisfy conditions E1 and E2, depending on the inclusion:
+* Regular exit
+* In-flight exit
 
-
-
+##### Regular exit
 May be used by UTXOs that have the transaction that created them included in a known position, in a ChildChain that is valid up to that point.
 
 Any Ethereum address that can prove possession of funds (UTXO) on the ChildChain can submit a request to exit.
@@ -120,7 +131,9 @@ An exit challenge period counts from the exit request submission, until this exi
 
 A successful and timely exit challenge invalidates the exit.
 
-In-flight exit
+
+
+##### In-flight exit
 
 May be used by in-flight funds; that is, where the inclusion of the transaction manipulating such funds is not known, or they're included in an invalid chain.
 
@@ -129,22 +142,21 @@ Assuming that the in-flight transaction has inputs that had been outputs of a tr
 
 
 #### Finalizing exits at Scheduled Finalization Time (SFT)
-Finalizing an exit means releasing funds from the RootChain contract to the exitor. Exits finalize at their Scheduled finalization time (SFT).
+Finalizing an exit means releasing funds from the root chain contract to the exitor. Exits finalize at their Scheduled finalization time (SFT).
 
 Exit scheduling and priorities satisfy condition E3.
 
 The table describes scheduled finalization time (SFT) for different types of exits: 
 
-Regular exits	SFT = max(exit_request_block.timestamp + MFP, utxo_submission_block.timestamp + MFP + REP)
-In-flight exits	exitable_at = max(exit_request_block.timestamp + MFP, youngest_input_block.timestamp + MFP + REP)
-Deposits	
-The exit priority for deposits is elevated to protect against malicious operators:
-
-SFT = max(exit_request_block.timestamp + MFP, utxo_submission_block.timestamp + MFP)
+| Exit type | Scheduled finalization time (SFT) |
+|   ---     |   ---     |
+| Regular exits | SFT = max(exit_request_block.timestamp + MFP, utxo_submission_block.timestamp + MFP + REP) |
+| In-flight exits   | exitable_at = max(exit_request_block.timestamp + MFP, youngest_input_block.timestamp + MFP + REP) |
+| Deposits  |   The exit priority for deposits is elevated to protect against malicious operators:   SFT = max(exit_request_block.timestamp + MFP, utxo_submission_block.timestamp + MFP) |
 
 See MoreVP protocol for more information.
 
-
+***
 
 ##### Configuration parameters for Scheduled Finalization Time (SFT)
 The table describes the configuration parameters for Scheduled Finalization Time (SFT): 

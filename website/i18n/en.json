@@ -9,6 +9,10 @@
         "title": "API Responsibilities",
         "sidebar_label": "API Responsibilities"
       },
+      "blockchain-design": {
+        "title": "Blockchain Design",
+        "sidebar_label": "Blockchain Design"
+      },
       "about-omisego": {
         "title": "About OmiseGO",
         "sidebar_label": "About OmiseGO"
