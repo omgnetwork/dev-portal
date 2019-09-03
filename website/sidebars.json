@@ -23,6 +23,13 @@
           "api-responsibilities"
         ]
       },
+        {
+          "type": "subcategory",
+          "label": "elixir-omg",
+          "ids": [
+            "starting-the-blockchain-services"
+          ]
+      },
       "even-more-examples"
      
     ]

@@ -42,14 +42,20 @@
         "title": "Send your first transaction",
         "sidebar_label": "Send your first transaction"
       },
+      "starting-the-blockchain-services": {
+        "title": "Starting the blockchain services",
+        "sidebar_label": "Starting the blockchain services"
+      },
       "the-plasma-lifecycle": {
         "title": "The Plasma lifecycle"
       }
     },
     "links": {
       "Docs": "Docs",
-      "OmiseGO.co": "OmiseGO.co",
-      "OmiseGO Network API Docs": "OmiseGO Network API Docs"
+      "API": "API",
+      "Block explorer": "Block explorer",
+      "Use cases": "Use cases",
+      "Product": "Product"
     },
     "categories": {
       "OmiseGO Docs": "OmiseGO Docs"
