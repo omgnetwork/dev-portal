@@ -21,9 +21,9 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'OmiseGO', // Title for your website.
+  title: 'omisego', // Title for your website.
   tagline: 'Developer documentation for OmiseGO - Unstoppable financial infrastructure',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  url: 'https://omisego.co/', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -54,13 +54,15 @@ const siteConfig = {
 
   /* path to images for header/footer */
   // headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
+  // footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
     /* primaryColor: '#96205b', */
-    primaryColor: "#444",
+    // primaryColor: "#444",
+    primaryColor: "#3c414d",
+    
    /* secondaryColor: '#69163f', */
     secondaryColor: '#2176ff',
   
