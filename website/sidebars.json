@@ -19,6 +19,7 @@
         "type": "subcategory",
         "label": "OmiseGO eWallet",
         "ids": [
+          "install-eWallet-server", 
           "integrate-the-eWallet-server",
           "api-responsibilities"
         ]

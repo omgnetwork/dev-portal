@@ -13,13 +13,17 @@
         "title": "Blockchain Design",
         "sidebar_label": "Blockchain Design"
       },
-      "about-omisego": {
+      "welcome": {
         "title": "About OmiseGO",
         "sidebar_label": "About OmiseGO"
       },
       "glossary": {
         "title": "Glossary",
         "sidebar_label": "Glossary"
+      },
+      "install-eWallet-server": {
+        "title": "Install eWallet Server",
+        "sidebar_label": "Install eWallet Server"
       },
       "integrate-the-eWallet-server": {
         "title": "Integrate the eWallet server",
@@ -31,9 +35,9 @@
       "morevp-technical-overview": {
         "title": "MoreVP Technical Overview"
       },
-      "welcome": {
-        "title": "Welcome to OmiseGO!",
-        "sidebar_label": "Welcome to OmiseGO!"
+      "add-id-here": {
+        "title": "Add title",
+        "sidebar_label": "Add title"
       },
       "overview-omg-network": {
         "title": "Overview"

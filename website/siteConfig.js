@@ -61,10 +61,12 @@ const siteConfig = {
   colors: {
     /* primaryColor: '#96205b', */
     // primaryColor: "#444",
-    primaryColor: "#3c414d",
+    primaryColor: "#2e374c",
     
    /* secondaryColor: '#69163f', */
-    secondaryColor: '#2176ff',
+    // secondaryColor: '#2176ff',
+    secondaryColor: '#215cec',
+    
   
   },
 

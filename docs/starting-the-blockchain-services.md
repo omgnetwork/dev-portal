@@ -23,8 +23,8 @@ This is the recommended method to start the blockchain services, with the auxili
 
 **Pre-requisites:**
 
-<!-- * Use docker-compose version 1.24.0, build 0aa59064. Version 1.17 has been found to be problematic. INO SAYS CAN BE REMOVED. I HAVE ASKED TO CLARIFY IF WE ARE NO LONGER RECOMMENDING ANY VERSION-->
-* Stop any services that are listening on the following TCP ports: 9656, 7434, 5000, 8545, 5432, 5433. All commands should be run from the root of the repo.
+* Latest, stable version of docker-compose.
+* Stop any services listening on the following TCP ports: 9656, 7434, 5000, 8545, 5432, 5433. All commands should be run from the root of the repo.
 
 
 **Perform these steps:**
@@ -37,7 +37,7 @@ This is the recommended method to start the blockchain services, with the auxili
 
     * To run a Watcher only, first, ensure you sent an ENV variable called withINFURA_API_KEYwith your api key; then, run:  `docker-compose -f docker-compose-watcher.yml up`
 
-2. To retrieve the deployed contract details, run `curl localhost:8000/get_contract`
+2. To retrieve the deployed contract details, run `curl localhost:8000/`
     
 ***
 
