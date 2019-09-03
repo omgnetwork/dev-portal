@@ -6,11 +6,9 @@ sidebar_label: Install eWallet Server
 
 
 ## Overview
+This guide describes how to install the eWallet Server:
 
-This is a guide to installing eWallet Server. 
-
-Instructions are provided for the following options: 
-* A quick install on macOS and Linux; or, 
+* Quick install on macOS and Linux; or, 
 * Advanced install (bare metal) instructions on other platforms
 
 
@@ -42,15 +40,10 @@ The quickest way to get OmiseGO eWallet Server running on macOS and Linux is to 
     docker-compose up -d
     ```
 
-***
-
-
-
-### Advanced install on other platforms
-
+### Install on other platforms
 This section provides instructions for installing the eWallet server on a base operating system, on platforms other than macOS or Linux.  
 
-The advanced installation involves these tasks:
+The advanced (bare metal) install involves these tasks:
 
 1. Prepare the environment
 2. Set up the server.
@@ -59,7 +52,7 @@ The advanced installation involves these tasks:
 
 
 #### Step 1: Prepare the environment
-To run this bare metal install, you'll need the following applications installed and running on your machine before you can set up the server:
+To run this install, you'll need the following applications installed and running on your machine before you can set up the server:
 
 * [PostgreSQL](https://www.postgresql.org/) - used for storing most of the data for the eWallet and LocalLedger.
 
@@ -70,20 +63,15 @@ To run this bare metal install, you'll need the following applications installed
 * [Git](https://git-scm.com/) - used for downloading and synchronizing codebase with the remote code repository.
 
 * [NodeJS](https://nodejs.org/en/) - used for building front-end code for the Admin Panel.
-
-Once you have these applications installed, you're ready to set up the server. 
-
+ 
 > Using macOS? You can also [install these dependencies via Homebrew](https://github.com/omisego/ewallet/blob/master/docs/setup/macos/brew_install_dependencies.md).
 
 
 
-
-
 #### Step 2: Set up the server
-
 Perform these steps to set up the server:  
 
-1. Get the code. Pull the eWallet code from the OmiseGO eWallet Git repository, to      a directory of your choice:
+1. Get the code. Pull the eWallet code from the OmiseGO eWallet Git repository to      a directory of your choice:
     ```
     $ git clone https://github.com/omisego/ewallet && cd ./ewallet
     ```
@@ -127,8 +115,11 @@ Perform these steps to set up the server:
     `$ MIX_ENV=test mix do ecto.create, ecto.migrate`
 
 
-Use the following command to run the tests:  $ mix test
-This will ensure your setup is working properly.
+5. Run the following command to run the tests:  
+    `$ mix test`
+    
+    This will ensure your setup is working properly.
+
 
 #### Step 3: Seed the database
 Some initial data is required to start the server. Either run the seed or the sample seed below:
@@ -136,7 +127,7 @@ Some initial data is required to start the server. Either run the seed or the sa
 1. Option A: Run this command to set up the initial data:
     `$ mix seed`
 
-2. Option B: Run this command to set up the initial data and populate the database with more sample data
+2. Option B: Run this command to set up the initial data and populate the database with more sample data:
     `$ mix seed --sample`ß
 
 
@@ -150,78 +141,115 @@ Some initial data is required to start the server. Either run the seed or the sa
     [info] Running UrlDispatcher.Plug with Cowboy http on port 4000
     ```
 
-3. Now you can access the eWallet server, using the available APIs:
+3. Access the eWallet server using the available APIs:
     ```
     $ curl http://localhost:4000
     {"status": true}
-    Next step
+    ```
+    
 
-4. Read the documentation to learn more and start using your eWallet!
+4. Read the documentation to learn how to use your eWallet!
 
 If you need help with the setup, check the Setup Troubleshooting guide
 
 
-*********
 
-Create and update the database
-Docker image entrypoint is configured to recognize most commands that are used during normal operations. The way to invoke these commands depend on the installation method you choose.
+## Create and update the database
+Docker image entrypoint is configured to recognize most commands used during normal operations. The way to invoke these commands depend on the installation method used: 
 
-In case of Docker-Compose, use docker-compose run --rm ewallet <command>
-In case of Docker, use docker run -it --rm omisego/ewallet <command>
-In case of bare metal, see also bare metal installation instruction.
-initdb
-For example:
+| Install method    | Instruction   |
+|   ---             |   ---         |
+|   Docker-Compose  |   Run `docker-compose run --rm ewallet`   |
+|   Docker         |   Run  `-it --rm omisego/ewallet`         |
+|   Bare metal (advanced install)   |   See install instructions for other platforms   |
 
-docker-compose run --rm ewallet initdb (Docker-Compose)
-docker run -it --rm omisego/ewallet:latest initdb (Docker)
-These commands create the database if not already created, or upgrade them if necessary. This command is expected to be run every time you have upgraded the version of OmiseGO eWallet Suite.
 
-seed
-For example:
 
-docker-compose run --rm ewallet seed (Docker-Compose)
-docker run -it --rm omisego/ewallet:latest seed (Docker)
-These commands create the initial data in the database. If seed is run without arguments, the command will seed initial data for production environment. The seed command may be configured to seed with other kind of seed data:
 
-seed --sample will seed a sample data suitable for evaluating OmiseGO eWallet Server.
-seed --e2e will seed a data for end-to-end testing.
-config
-For example:
+### initdb
+These commands create or upgrade the database, as required. You'll need to run these commands each time you upgrade the version of the OmiseGO eWallet Suite.
 
-docker-compose run --rm ewallet config <key> <value> (Docker-Compose)
-docker run -it --rm omisego/ewallet:latest config <key> <value> (Docker)
-These commands will update the configuration key (see also settings documentation) in the database. For some keys which require whitespace, such as gcs_credentials, you can prevent string splitting by putting them in a single or double-quote, e.g. config gcs_credentials "gcs configuration".
+* Docker-Compose: `docker-compose run --rm ewallet initdb`
+* Docker: `docker run -it --rm omisego/ewallet:latest initdb`
 
-Documentation
-Detailed documentation can found in the GitHub docs directory. It is recommended to take a look at the documentation of the OmiseGO eWallet Server you are running.
 
-API documentation
+### seed
+These commands create the initial data in the database. If seed is run without arguments, the command will seed initial data for production environment. For example:
+
+* Docker-Compose: `docker-compose run --rm ewallet seed` 
+* Docker: `docker run -it --rm omisego/ewallet:latest seed` 
+ 
+ The seed command may be configured to seed with other kind of seed data:
+
+* To seed sample data suitable for evaluating OmiseGO eWallet:
+    `seed --sample`
+* To seed data for end-to-end testing:
+    `seed --e2e`
+
+> See also https://github.com/omisego/ewallet/blob/master/docs/setup/advanced/env.md
+
+### config
+These commands update the configuration key in the database.
+
+> See also: https://github.com/omisego/ewallet/blob/master/docs/setup/advanced/settings.md
+
+For keys requiring whitespace, such as gcs_credentials, you can prevent string splitting by putting them in a single or double-quote, e.g. config gcs_credentials "gcs configuration".
+
+**Example:**
+
+* Docker-Compose: `docker-compose run --rm ewallet config` <key> <value>
+* Docker: `docker run -it --rm omisego/ewallet:latest config` <key> <value>
+
+
+> Detailed documentation may be found in the [GitHub docs directory](https://github.com/omisego/ewallet/tree/master/docs). It is recommended that you review the documentation for the OmiseGO eWallet Server you're running.
+
+## API documentation
 OmiseGO eWallet Server is meant to be run by the provider, and thus API documentation is available in the OmiseGO eWallet Server itself rather than as online documentation. You may review the API documentation at the following locations in the OmiseGO eWallet Server setup.
 
-/api/admin/docs.ui for Admin API, used by server apps to manage tokens, accounts, transactions, global settings, etc.
-/api/client/docs.ui for Client API, used by client apps to create transaction on behalf of user, user's settings, etc.
-In case you want to explore the API documentation without installing the OmiseGO eWallet Server, you may use our OmiseGO eWallet Staging. Please note that OmiseGO eWallet Staging tracks development release and there might be API differences from the stable release.
+* Admin API: /api/admin/docs.ui
 
-Admin API documentation (Swagger JSON, Swagger YAML)
-Client API documentation (Swagger JSON, Swagger YAML)
-Community Efforts
-We are thankful to our community for creating and maintaining these wonderful works that we otherwise could not have done ourselves. If you have ported any part of the OmiseGO eWallet Server to another platform, we will be happy to list them here. Submit us a pull request.
+    Used by server apps to manage:
 
-Alainy/OmiseGo-Go-SDK (Golang)
+    * tokens
+    * accounts
+    * transactions
+    * global transactions
+
+    
+* Client API:  /api/client/docs.ui
+    
+    Used by client apps to create transaction on behalf of user, user settings, etc.
+
+If you wish to explore the API documentation without installing the OmiseGO eWallet Server, you may use our [OmiseGO eWallet Staging](https://ewallet.staging.omisego.io/)
+
+> Note that OmiseGO eWallet Staging tracks development release and there might be API differences from the stable release.
+
+* [Admin API documentation](https://ewallet.staging.omisego.io/api/admin/docs.ui) 
+    * [Swagger JSON](https://ewallet.staging.omisego.io/api/admin/docs.json)
+    * [Swagger YAML](https://ewallet.staging.omisego.io/api/admin/docs.yaml)
+
+* [Client API documentation](https://ewallet.staging.omisego.io/api/client/docs.ui)
+    * [Swagger JSON](https://ewallet.staging.omisego.io/api/client/docs.json)
+    * [Swagger YAML](https://ewallet.staging.omisego.io/api/client/docs.yaml)
+
+<!-- Community Efforts
+We are thankful to our community for creating and maintaining these wonderful works that we otherwise could not have done ourselves. If you have ported any part of the OmiseGO eWallet Server to another platform, we will be happy to list them here. Submit us a pull request. LEAVE THIS ON THE GITHUB PAGE-->
+
+<!-- Alainy/OmiseGo-Go-SDK (Golang)
 block-base/ewallet-js (JavaScript)
 Contributing
-Contributing to the OmiseGO eWallet Server can be contributions to the code base, bug reports, feature suggestions or any sort of feedback. Please learn more from our contributing guide.
+Contributing to the OmiseGO eWallet Server can be contributions to the code base, bug reports, feature suggestions or any sort of feedback. Please learn more from our contributing guide. LEAVE THIS ON THE GITHUB PAGE -->
 
-Support
+<!-- Support
 The OmiseGO eWallet Server team closely monitors the following channels.
 
 GitHub Issues: Browse or file a report for any bugs found
 Gitter: Discuss features and suggestions in real-time
 Stack Overflow: Search or create a new question with the tag omisego
-If you need enterprise support or hosting solutions, please get in touch with us for more details.
+If you need enterprise support or hosting solutions, please get in touch with us for more details. LEAVE THIS ON THE GITHUB PAGE -->
 
-License
-The OmiseGO eWallet Server is licensed under the Apache License
+<!-- License
+The OmiseGO eWallet Server is licensed under the Apache License LEAVE THIS ON THE GITHUB PAGE-->
 
 ## Setup Troubleshooting Guide
 
@@ -285,7 +313,7 @@ Ensure that:
     host    all             all             ::1/128                 trust
     ```
 
-***
+
 
 
 
