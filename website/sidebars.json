@@ -22,7 +22,10 @@
           "install-eWallet-server", 
           "integrate-the-eWallet-server",
           "api-responsibilities",
-          "Transaction request flow"
+          "transaction-request-flow",
+          "advanced_filtering",
+          "ewallet_api_websockets",
+          "two_factor_authentication"
         ]
       },
         {

@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Developer documentation for OmiseGO - Unstoppable financial infrastructure",
     "docs": {
+      "advanced_filtering": {
+        "title": "Advanced filtering",
+        "sidebar_label": "Advanced filtering"
+      },
       "api-responsibilities": {
         "title": "API Responsibilities",
         "sidebar_label": "API Responsibilities"
@@ -12,6 +16,10 @@
       "blockchain-design": {
         "title": "Blockchain Design",
         "sidebar_label": "Blockchain Design"
+      },
+      "ewallet_api_websockets": {
+        "title": "eWallet API websockets",
+        "sidebar_label": "eWallet API websockets"
       },
       "welcome": {
         "title": "About OmiseGO",
@@ -35,10 +43,6 @@
       "morevp-technical-overview": {
         "title": "MoreVP Technical Overview"
       },
-      "add-id-here": {
-        "title": "Add title",
-        "sidebar_label": "Add title"
-      },
       "overview-omg-network": {
         "title": "Overview"
       },
@@ -52,6 +56,14 @@
       },
       "the-plasma-lifecycle": {
         "title": "The Plasma lifecycle"
+      },
+      "transaction-request-flow": {
+        "title": "Transaction request flow",
+        "sidebar_label": "Transaction request flow"
+      },
+      "two_factor_authentication": {
+        "title": "Two factor authentication",
+        "sidebar_label": "Two factor authentication"
       }
     },
     "links": {

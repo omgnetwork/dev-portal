@@ -6,19 +6,19 @@ sidebar_label: Transaction request flow
 
 <!-- GITHUB SOURCE FOR THIS CONTENT: https://github.com/omisego/ewallet/blob/master/docs/guides/transaction_request_flow.md -->
 
-## Introduction
+## Overview
 
-Transaction requests are a way to create pre-transactions with only one side (either sender or receiver). That pre-transaction will become a full transaction once the other side has consumed it.
+Transaction requests are a way to create pre-transactions with only one side (either sender or receiver). The pre-transaction becomes a full transaction once the other side has consumed it.
 
 Here is a quick example to give you a better idea of how it works:
 
 1. Alice generates a transaction request to receive 10 OMG. The transaction request ID can be embedded in a QR code to provide a better user experience.
 2. Alice shows her QR code to Bob.
-3. Bob scans it, see the transaction request, updates some parts of it if needed, finalizes it and sends 10 OMG to Alice.
+3. Bob scans it, see the transaction request, updates some parts of it if needed, finalizes it, and sends 10 OMG to Alice.
 
 That's the simple version. Transaction requests come with a bunch of options to make them as flexible as possible.
 
-## A look at transaction requests
+## Configuring transaction requests
 
 When creating transaction requests, a certain number of fields are optional but allow the configuration of the request. Walking through those fields is a good way to get a better understanding.
 
@@ -96,7 +96,7 @@ encrypted_metadata:
   default: {}
 ```
 
-## Transaction Consumptions: Understanding the estimated amounts and finalized
+## Transaction Consumptions: Understanding estimated amounts, and finalized
 
 When consuming a transaction request, the consumer will receive a consumption right away. If that request didn't require approval, it is finalized right away and the consumption will contain the fields:
 
@@ -107,9 +107,9 @@ When consuming a transaction request, the consumer will receive a consumption ri
 
 When an approval is required, however, the consumption received after consumption will be pending, with the `estimated_` amounts set, but no `finalized_` ones yet. Once the request creator has approved it, those amounts will be populated with the actual values of the transaction.
 
-## Flow
+## Workflow
 
-Here is the flow used in the sample OMGShop application:
+The workflow used in the sample OMGShop application is as follows:
 
 1. Alice using [the OMGShop iOS application](https://github.com/omisego/sample-ios) generates a transaction request. The endpoint called is [/me.create_transaction_request](https://ewallet.demo.omisego.io/api/client/docs.ui#/TransactionRequest/create_transaction_request). The `id` of that is embedded in a QR Code and displayed on the screen of the device.
 
