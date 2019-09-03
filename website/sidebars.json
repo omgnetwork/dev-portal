@@ -21,7 +21,8 @@
         "ids": [
           "install-eWallet-server", 
           "integrate-the-eWallet-server",
-          "api-responsibilities"
+          "api-responsibilities",
+          "Transaction request flow"
         ]
       },
         {

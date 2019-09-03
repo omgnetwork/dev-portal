@@ -203,54 +203,6 @@ For keys requiring whitespace, such as gcs_credentials, you can prevent string s
 
 > Detailed documentation may be found in the [GitHub docs directory](https://github.com/omisego/ewallet/tree/master/docs). It is recommended that you review the documentation for the OmiseGO eWallet Server you're running.
 
-## API documentation
-OmiseGO eWallet Server is meant to be run by the provider, and thus API documentation is available in the OmiseGO eWallet Server itself rather than as online documentation. You may review the API documentation at the following locations in the OmiseGO eWallet Server setup.
-
-* Admin API: /api/admin/docs.ui
-
-    Used by server apps to manage:
-
-    * tokens
-    * accounts
-    * transactions
-    * global transactions
-
-    
-* Client API:  /api/client/docs.ui
-    
-    Used by client apps to create transaction on behalf of user, user settings, etc.
-
-If you wish to explore the API documentation without installing the OmiseGO eWallet Server, you may use our [OmiseGO eWallet Staging](https://ewallet.staging.omisego.io/)
-
-> Note that OmiseGO eWallet Staging tracks development release and there might be API differences from the stable release.
-
-* [Admin API documentation](https://ewallet.staging.omisego.io/api/admin/docs.ui) 
-    * [Swagger JSON](https://ewallet.staging.omisego.io/api/admin/docs.json)
-    * [Swagger YAML](https://ewallet.staging.omisego.io/api/admin/docs.yaml)
-
-* [Client API documentation](https://ewallet.staging.omisego.io/api/client/docs.ui)
-    * [Swagger JSON](https://ewallet.staging.omisego.io/api/client/docs.json)
-    * [Swagger YAML](https://ewallet.staging.omisego.io/api/client/docs.yaml)
-
-<!-- Community Efforts
-We are thankful to our community for creating and maintaining these wonderful works that we otherwise could not have done ourselves. If you have ported any part of the OmiseGO eWallet Server to another platform, we will be happy to list them here. Submit us a pull request. LEAVE THIS ON THE GITHUB PAGE-->
-
-<!-- Alainy/OmiseGo-Go-SDK (Golang)
-block-base/ewallet-js (JavaScript)
-Contributing
-Contributing to the OmiseGO eWallet Server can be contributions to the code base, bug reports, feature suggestions or any sort of feedback. Please learn more from our contributing guide. LEAVE THIS ON THE GITHUB PAGE -->
-
-<!-- Support
-The OmiseGO eWallet Server team closely monitors the following channels.
-
-GitHub Issues: Browse or file a report for any bugs found
-Gitter: Discuss features and suggestions in real-time
-Stack Overflow: Search or create a new question with the tag omisego
-If you need enterprise support or hosting solutions, please get in touch with us for more details. LEAVE THIS ON THE GITHUB PAGE -->
-
-<!-- License
-The OmiseGO eWallet Server is licensed under the Apache License LEAVE THIS ON THE GITHUB PAGE-->
-
 ## Setup Troubleshooting Guide
 
 ### "invalid url ... path should be a database name"
@@ -312,6 +264,56 @@ Ensure that:
     host    all             all             127.0.0.1/32            trust
     host    all             all             ::1/128                 trust
     ```
+
+## API documentation
+OmiseGO eWallet Server is meant to be run by the provider, and thus API documentation is available in the OmiseGO eWallet Server itself rather than as online documentation. You may review the API documentation at the following locations in the OmiseGO eWallet Server setup.
+
+* Admin API: /api/admin/docs.ui
+
+    Used by server apps to manage:
+
+    * tokens
+    * accounts
+    * transactions
+    * global transactions
+
+    
+* Client API:  /api/client/docs.ui
+    
+    Used by client apps to create transaction on behalf of user, user settings, etc.
+
+If you wish to explore the API documentation without installing the OmiseGO eWallet Server, you may use our [OmiseGO eWallet Staging](https://ewallet.staging.omisego.io/)
+
+> Note that OmiseGO eWallet Staging tracks development release and there might be API differences from the stable release.
+
+* [Admin API documentation](https://ewallet.staging.omisego.io/api/admin/docs.ui) 
+    * [Swagger JSON](https://ewallet.staging.omisego.io/api/admin/docs.json)
+    * [Swagger YAML](https://ewallet.staging.omisego.io/api/admin/docs.yaml)
+
+* [Client API documentation](https://ewallet.staging.omisego.io/api/client/docs.ui)
+    * [Swagger JSON](https://ewallet.staging.omisego.io/api/client/docs.json)
+    * [Swagger YAML](https://ewallet.staging.omisego.io/api/client/docs.yaml)
+
+<!-- Community Efforts
+We are thankful to our community for creating and maintaining these wonderful works that we otherwise could not have done ourselves. If you have ported any part of the OmiseGO eWallet Server to another platform, we will be happy to list them here. Submit us a pull request. LEAVE THIS ON THE GITHUB PAGE-->
+
+<!-- Alainy/OmiseGo-Go-SDK (Golang)
+block-base/ewallet-js (JavaScript)
+Contributing
+Contributing to the OmiseGO eWallet Server can be contributions to the code base, bug reports, feature suggestions or any sort of feedback. Please learn more from our contributing guide. LEAVE THIS ON THE GITHUB PAGE -->
+
+<!-- Support
+The OmiseGO eWallet Server team closely monitors the following channels.
+
+GitHub Issues: Browse or file a report for any bugs found
+Gitter: Discuss features and suggestions in real-time
+Stack Overflow: Search or create a new question with the tag omisego
+If you need enterprise support or hosting solutions, please get in touch with us for more details. LEAVE THIS ON THE GITHUB PAGE -->
+
+<!-- License
+The OmiseGO eWallet Server is licensed under the Apache License LEAVE THIS ON THE GITHUB PAGE-->
+
+
 
 
 
