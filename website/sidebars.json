@@ -27,7 +27,8 @@
           "advanced_filtering",
           "ewallet_api_websockets",
           "two_factor_authentication",
-          "ewallet-configuration-settings"
+          "ewallet-configuration-settings",
+          "environment-variables"
         ]
       },
         {

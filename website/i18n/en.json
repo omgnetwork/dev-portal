@@ -21,6 +21,10 @@
         "title": "eWallet API websockets",
         "sidebar_label": "eWallet API websockets"
       },
+      "ewallet-configuration-settings": {
+        "title": "Configuration settings for the eWallet",
+        "sidebar_label": "Configuration settings for the eWallet"
+      },
       "welcome": {
         "title": "About OmiseGO",
         "sidebar_label": "About OmiseGO"
