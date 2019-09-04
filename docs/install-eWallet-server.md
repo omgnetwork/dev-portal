@@ -9,7 +9,9 @@ sidebar_label: Install eWallet Server
 This guide describes how to install the eWallet Server:
 
 * Quick install on macOS and Linux; or, 
-* Advanced install (bare metal) instructions on other platforms
+* Bare metal setup (advanced install on other platforms)
+
+## Install
 
 
 ### Quick install on macOS or Linux
@@ -40,10 +42,10 @@ The quickest way to get OmiseGO eWallet Server running on macOS and Linux is to 
     docker-compose up -d
     ```
 
-### Install on other platforms
-This section provides instructions for installing the eWallet server on a base operating system, on platforms other than macOS or Linux.  
+### Bare metal setup
+This section provides advanced instructions for installing the eWallet server on a base operating system, on platforms other than macOS or Linux.  
 
-The advanced (bare metal) install involves these tasks:
+A bare metal setup involves these tasks:
 
 1. Prepare the environment
 2. Set up the server.
@@ -53,6 +55,8 @@ The advanced (bare metal) install involves these tasks:
 
 #### Step 1: Prepare the environment
 To run this install, you'll need the following applications installed and running on your machine before you can set up the server:
+
+> Using macOS? You can [install these dependencies via Homebrew](https://github.com/omisego/ewallet/blob/master/docs/setup/macos/brew_install_dependencies.md).
 
 * [PostgreSQL](https://www.postgresql.org/) - used for storing most of the data for the eWallet and LocalLedger.
 
@@ -64,7 +68,6 @@ To run this install, you'll need the following applications installed and runnin
 
 * [NodeJS](https://nodejs.org/en/) - used for building front-end code for the Admin Panel.
  
-> Using macOS? You can also [install these dependencies via Homebrew](https://github.com/omisego/ewallet/blob/master/docs/setup/macos/brew_install_dependencies.md).
 
 
 
@@ -161,7 +164,7 @@ Docker image entrypoint is configured to recognize most commands used during nor
 |   ---             |   ---         |
 |   Docker-Compose  |   Run `docker-compose run --rm ewallet`   |
 |   Docker         |   Run  `-it --rm omisego/ewallet`         |
-|   Bare metal (advanced install)   |   See install instructions for other platforms   |
+|   Bare metal   |   See install instructions for the bare metal setup   |
 
 
 
@@ -185,6 +188,8 @@ These commands create the initial data in the database. If seed is run without a
     `seed --sample`
 * To seed data for end-to-end testing:
     `seed --e2e`
+* To seed the application settings for the OmiseGO eWallet Server:
+    `seed --settings` 
 
 > See also https://github.com/omisego/ewallet/blob/master/docs/setup/advanced/env.md
 

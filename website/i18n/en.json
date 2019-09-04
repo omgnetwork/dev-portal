@@ -43,6 +43,10 @@
       "morevp-technical-overview": {
         "title": "MoreVP Technical Overview"
       },
+      "title": {
+        "title": "title",
+        "sidebar_label": "title"
+      },
       "overview-omg-network": {
         "title": "Overview"
       },
@@ -64,6 +68,10 @@
       "two_factor_authentication": {
         "title": "Two factor authentication",
         "sidebar_label": "Two factor authentication"
+      },
+      "upgrade-ewallet-server": {
+        "title": "Upgrade the eWallet Server",
+        "sidebar_label": "Upgrade the eWallet Server"
       }
     },
     "links": {

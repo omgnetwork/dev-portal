@@ -20,12 +20,14 @@
         "label": "OmiseGO eWallet",
         "ids": [
           "install-eWallet-server", 
+          "upgrade-ewallet-server",
           "integrate-the-eWallet-server",
           "api-responsibilities",
           "transaction-request-flow",
           "advanced_filtering",
           "ewallet_api_websockets",
-          "two_factor_authentication"
+          "two_factor_authentication",
+          "ewallet-configuration-settings"
         ]
       },
         {

@@ -9,6 +9,7 @@ OmiseGO allows you to build scalable decentralized payment apps. Leverage Plasma
 Use the OmiseGO Network to access, manage, and transact with digital assets that are kept securely on the blockchain. For hands-on experience interacting with Plasma's interface, see Send your first transaction
 To learn more about OmiseGO's network architecture and what you can build with it, see Understanding Plasma (MoreVP). Technical details are at Technical Overview - MoreVP
 
+
 ## API Endpoints
 
 - [Watcher Informational API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/informational_api_specs.yaml)

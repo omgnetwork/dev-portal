@@ -20,7 +20,7 @@ Child chain refers to a blockchain that coalesces multiple transactions into a c
 
 
 
-### About OmiseGO's blockchain design
+### OmiseGO's blockchain design
 The key features of OmiseGO's blockchain design may be viewed as deviations from the big picture Plasma that is outlined by the original Plasma paper:
 
 1. Only supports transactions transferring value between addresses.
