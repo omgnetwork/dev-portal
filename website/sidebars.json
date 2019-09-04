@@ -8,17 +8,32 @@
         "label": "OmiseGO Network",
         "ids": [
           "overview-omg-network",
-          "send-your-first-transaction"
-          
+          "send-your-first-transaction",
+          "introduction-plasma-more-vp",
+          "morevp-technical-overview",
+          "the-plasma-lifecycle",
+          "blockchain-design"
         ]
       },
       {
         "type": "subcategory",
         "label": "OmiseGO eWallet",
         "ids": [
+          "install-eWallet-server", 
           "integrate-the-eWallet-server",
-          "api-responsibilities"
+          "api-responsibilities",
+          "transaction-request-flow",
+          "advanced_filtering",
+          "ewallet_api_websockets",
+          "two_factor_authentication"
         ]
+      },
+        {
+          "type": "subcategory",
+          "label": "elixir-omg",
+          "ids": [
+            "starting-the-blockchain-services"
+          ]
       },
       "even-more-examples"
      

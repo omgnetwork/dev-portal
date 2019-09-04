@@ -64,12 +64,12 @@ The client-side wallet relies on the funds you have on your existing account. Yo
 
 
 #### Step 2: Make a deposit
-Click Deposit.
-Define the amount you wish to deposit, in Wei.
-Click OK.
-A system message confirms your transaction. Click Confirm. 
-You may need to wait for around 2-3 minutes, depending on network congestion.
-Click Refresh. The balance refreshes, and updates.
+1. Click **Deposit**.
+2. Define the amount you wish to deposit, in Wei.
+3. Click **OK**. A system message confirms your transaction.
+4. Click **Confirm**. 
+   You may need to wait for around 2-3 minutes, depending on network congestion.
+5. Click **Refresh**. The balance refreshes, and updates.
 
 #### Step 3: Make a transaction
 1. Click **Transfer**.

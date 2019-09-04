@@ -21,9 +21,9 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'OmiseGO Docs', // Title for your website.
+  title: 'omisego', // Title for your website.
   tagline: 'Developer documentation for OmiseGO - Unstoppable financial infrastructure',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  url: 'https://omisego.co/', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -39,27 +39,34 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'welcome', label: 'Docs'},
+    { href: 'https://developer.omisego.co/elixir-omg/', external: true, label: 'API' },
+    { href: 'http://quest.samrong.omg.network/', external: true, label: 'Block explorer' },
+    { href: 'https://omisego.co/use-cases', external: true, label: 'Use cases' },
     // {doc: 'doc4', label: 'API'},
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},
-    { href: 'https://omisego.co/', external: true, label: 'OmiseGO.co' },
-    { href: 'https://developer.omisego.co/elixir-omg/', external: true, label: 'OmiseGO Network API Docs' },
+    { href: 'https://omisego.co/', external: true, label: 'Product' },
+    
   ],
   
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
+  // headerIcon: 'img/favicon.ico',
+  // footerIcon: 'img/favicon.ico',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
     /* primaryColor: '#96205b', */
-    primaryColor: "#444",
+    // primaryColor: "#444",
+    primaryColor: "#2e374c",
+    
    /* secondaryColor: '#69163f', */
-    secondaryColor: '#2176ff',
+    // secondaryColor: '#2176ff',
+    secondaryColor: '#215cec',
+    
   
   },
 

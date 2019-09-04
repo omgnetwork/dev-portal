@@ -1,12 +1,12 @@
 ---
-id: about-omisego
+id: welcome
 title: About OmiseGO
 sidebar_label: About OmiseGO
 ---
 
 Welcome to the OmiseGO developer documentation.
 
-## About OmiseGO
+
 
 OmiseGO's mission and vision is to enable open and accessible financial services that is fast, fair and secure. Our goal is large. We want to become the standard backbone infrastructure that underpins a healthy, open and accessible financial services ecosystem.
 
