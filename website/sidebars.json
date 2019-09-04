@@ -7,12 +7,15 @@
       ],
       
       "OmiseGO Network": [
-        "overview-omg-network",
+          "overview-omg-network",
+          "network-upgrade-guide",
           "send-your-first-transaction",
           "introduction-plasma-more-vp",
           "morevp-technical-overview",
           "the-plasma-lifecycle",
-          "blockchain-design"
+          "blockchain-design",
+          "blockchain-architecture",
+          "omisego-network-resources"
       ],
           
        
@@ -33,7 +36,7 @@
           "type": "subcategory",
           "label": "OmiseGO Network API",
           "ids": [
-            "overview-omg-network"
+            "omg-network-apis"
           ]
         },
           {

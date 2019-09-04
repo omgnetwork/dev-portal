@@ -2,6 +2,7 @@
 id: overview-omg-network
 title: Overview
 ---
+
 ## About OmiseGO Network
 
 OmiseGO allows you to build scalable decentralized payment apps. Leverage Plasma architecture to build a L2 Application with high throughputs and strong safety guarantees. 
@@ -10,18 +11,7 @@ Use the OmiseGO Network to access, manage, and transact with digital assets that
 To learn more about OmiseGO's network architecture and what you can build with it, see Understanding Plasma (MoreVP). Technical details are at Technical Overview - MoreVP
 
 
-## API Endpoints
+## Network connection details
 
-- [Watcher Informational API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/informational_api_specs.yaml)
-
-- [Watcher Security Critical API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
-
-- Childchain API : https://developer.omisego.co/elixir-omg/docs-ui/?url=master/operator_api_specs.yaml
-
-<!-- Documentation
-OMG Network Docs
-
-OMG-JS Docs
-
-Plasma CLI Docs -->
+Connection details for the OmiseGO Network may be found at https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md
 
