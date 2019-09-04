@@ -1,0 +1,65 @@
+{
+  "docs": {
+    "OmiseGO Docs": [
+      "welcome",
+      "glossary",
+      {
+        "type": "subcategory",
+        "label": "OmiseGO Network",
+        "ids": [
+          "overview-omg-network",
+          "send-your-first-transaction",
+          "introduction-plasma-more-vp",
+          "morevp-technical-overview",
+          "the-plasma-lifecycle",
+          "blockchain-design"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "OmiseGO eWallet",
+        "ids": [
+          "install-eWallet-server", 
+          "upgrade-ewallet-server",
+          "integrate-the-eWallet-server",
+          "api-responsibilities",
+          "transaction-request-flow",
+          "advanced_filtering",
+          "ewallet_api_websockets",
+          "two_factor_authentication",
+          "ewallet-configuration-settings",
+          "environment-variables"
+        ]
+      },
+        {
+          "type": "subcategory",
+          "label": "elixir-omg",
+          "ids": [
+            "starting-the-blockchain-services"
+          ]
+        },
+        {
+          "type": "subcategory",
+          "label": "API Reference",
+          "ids": [
+            "api-reference"
+          ]
+        },
+        "even-more-examples"
+       
+      ]
+    }
+    
+  
+  }
+
+    
+  
+   
+
+
+
+
+  
+
+

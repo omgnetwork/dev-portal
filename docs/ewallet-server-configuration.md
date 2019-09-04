@@ -1,7 +1,7 @@
 ---
 id: ewallet-configuration-settings
-title: Configuration settings for the eWallet
-sidebar_label: Configuration settings for the eWallet
+title: Configuration settings
+sidebar_label: Configuration settings
 ---
 
 ## Overview

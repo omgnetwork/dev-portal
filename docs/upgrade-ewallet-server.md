@@ -1,7 +1,7 @@
 ---
 id: upgrade-ewallet-server
-title: Upgrade the eWallet Server
-sidebar_label: Upgrade the eWallet Server
+title: Upgrade eWallet Server
+sidebar_label: Upgrade eWallet Server
 ---
 
 

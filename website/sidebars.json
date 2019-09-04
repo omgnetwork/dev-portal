@@ -1,47 +1,51 @@
+
 {
   "docs": {
     "OmiseGO Docs": [
-      "welcome",
-      "glossary",
-      {
-        "type": "subcategory",
-        "label": "OmiseGO Network",
-        "ids": [
-          "overview-omg-network",
+        "welcome",
+        "glossary"
+      ],
+      
+      "OmiseGO Network": [
+        "overview-omg-network",
           "send-your-first-transaction",
           "introduction-plasma-more-vp",
           "morevp-technical-overview",
           "the-plasma-lifecycle",
           "blockchain-design"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "OmiseGO eWallet",
-        "ids": [
-          "install-eWallet-server", 
-          "upgrade-ewallet-server",
-          "integrate-the-eWallet-server",
-          "api-responsibilities",
-          "transaction-request-flow",
-          "advanced_filtering",
-          "ewallet_api_websockets",
-          "two_factor_authentication",
-          "ewallet-configuration-settings",
-          "environment-variables"
-        ]
-      },
+      ],
+          
+       
+      "OmiseGO eWallet Suite": [
+        "install-eWallet-server", 
+        "upgrade-ewallet-server",
+        "integrate-the-eWallet-server",
+        "transaction-request-flow",
+        "advanced_filtering",
+        "two_factor_authentication",
+        "ewallet-configuration-settings",
+        "environment-variables"
+      ],
+
+      "API Reference": [
+        "api-reference-introduction",
         {
           "type": "subcategory",
-          "label": "elixir-omg",
+          "label": "OmiseGO Network API",
           "ids": [
-            "starting-the-blockchain-services"
+            "overview-omg-network"
           ]
-      },
-      "even-more-examples"
-     
-    ]
+        },
+          {
+       
+          "type": "subcategory",
+          "label": "OmiseGO eWallet API",
+          "ids": [
+            "api-responsibilities",
+            "ewallet_api_websockets"
+          ]
+        }
+    
+      ]
+    }
   }
-  
-
-}

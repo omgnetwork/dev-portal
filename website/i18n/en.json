@@ -9,6 +9,10 @@
         "title": "Advanced filtering",
         "sidebar_label": "Advanced filtering"
       },
+      "api-reference-introduction": {
+        "title": "Introduction",
+        "sidebar_label": "Introduction"
+      },
       "api-responsibilities": {
         "title": "API Responsibilities",
         "sidebar_label": "API Responsibilities"
@@ -17,13 +21,17 @@
         "title": "Blockchain Design",
         "sidebar_label": "Blockchain Design"
       },
+      "environment-variables": {
+        "title": "Environment variables",
+        "sidebar_label": "Environment variables"
+      },
       "ewallet_api_websockets": {
         "title": "eWallet API websockets",
         "sidebar_label": "eWallet API websockets"
       },
       "ewallet-configuration-settings": {
-        "title": "Configuration settings for the eWallet",
-        "sidebar_label": "Configuration settings for the eWallet"
+        "title": "Configuration settings",
+        "sidebar_label": "Configuration settings"
       },
       "welcome": {
         "title": "About OmiseGO",
@@ -74,8 +82,8 @@
         "sidebar_label": "Two factor authentication"
       },
       "upgrade-ewallet-server": {
-        "title": "Upgrade the eWallet Server",
-        "sidebar_label": "Upgrade the eWallet Server"
+        "title": "Upgrade eWallet Server",
+        "sidebar_label": "Upgrade eWallet Server"
       }
     },
     "links": {
@@ -86,7 +94,10 @@
       "Product": "Product"
     },
     "categories": {
-      "OmiseGO Docs": "OmiseGO Docs"
+      "OmiseGO Docs": "OmiseGO Docs",
+      "OmiseGO Network": "OmiseGO Network",
+      "OmiseGO eWallet Suite": "OmiseGO eWallet Suite",
+      "API Reference": "API Reference"
     }
   },
   "pages-strings": {
