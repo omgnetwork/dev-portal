@@ -21,17 +21,17 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'omisego', // Title for your website.
+  title: 'OmiseGO', // Title for your website.
   tagline: 'Developer documentation for OmiseGO - Unstoppable financial infrastructure',
-  url: 'https://omisego.co/', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://developer.omisego.co/', // Your website URL 
+  baseUrl: '/docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'omisego',
-  organizationName: 'omisego',
+  projectName: 'OmiseGO',
+  organizationName: 'OmiseGO',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -60,13 +60,9 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    /* primaryColor: '#96205b', */
-    // primaryColor: "#444",
     primaryColor: "#2e374c",
-    
-   /* secondaryColor: '#69163f', */
-    // secondaryColor: '#2176ff',
     secondaryColor: '#215cec',
+    
     
   
   },

@@ -71,6 +71,10 @@
         "title": "OmiseGO Network APIs",
         "sidebar_label": "OmiseGO Network APIs"
       },
+      "omisego-network-resources": {
+        "title": "OmiseGO Network Rresources",
+        "sidebar_label": "OmiseGO Network Resources"
+      },
       "overview-omg-network": {
         "title": "Overview"
       },
