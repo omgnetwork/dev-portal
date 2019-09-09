@@ -89,10 +89,7 @@ Recipient address can be another wallet you own on MetaMask.
 2. Select the UTXO that you would like to exit.
 3. Click **OK**. 
 
-
-
-
-
+> **Congratulations!** You've performed an end-to-end process of transacting on the OmiseGO Network.
 
 
 	

@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Developer documentation for OmiseGO - Unstoppable financial infrastructure",
     "docs": {
+      "about-the-omisego-block-explorer": {
+        "title": "Introduction to the OmiseGO Block Explorer",
+        "sidebar_label": "Introduction to the OmiseGO Block Explorer"
+      },
       "advanced_filtering": {
         "title": "Advanced filtering",
         "sidebar_label": "Advanced filtering"
@@ -25,6 +29,14 @@
         "title": "Blockchain Design",
         "sidebar_label": "Blockchain Design"
       },
+      "conventions": {
+        "title": "Naming conventions",
+        "sidebar_label": "Naming conventions"
+      },
+      "elixir-omg-applications": {
+        "title": "elixir-omg Applications",
+        "sidebar_label": "elixir-omg Applications"
+      },
       "environment-variables": {
         "title": "Environment variables",
         "sidebar_label": "Environment variables"
@@ -32,6 +44,14 @@
       "ewallet_api_websockets": {
         "title": "eWallet API websockets",
         "sidebar_label": "eWallet API websockets"
+      },
+      "ewallet-components": {
+        "title": "Components",
+        "sidebar_label": "Components"
+      },
+      "ewallet-databases": {
+        "title": "Databases",
+        "sidebar_label": "Databases"
       },
       "ewallet-configuration-settings": {
         "title": "Configuration settings",
@@ -59,6 +79,10 @@
       "morevp-technical-overview": {
         "title": "MoreVP Technical Overview"
       },
+      "network-connection-details": {
+        "title": "Network connection details",
+        "sidebar_label": "Network connection details"
+      },
       "network-upgrade-guide": {
         "title": "Network upgrade guide",
         "sidebar_label": "Network upgrade guide"
@@ -74,6 +98,14 @@
       "omisego-network-resources": {
         "title": "OmiseGO Network Rresources",
         "sidebar_label": "OmiseGO Network Resources"
+      },
+      "overview-elixir-omg": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
+      },
+      "overview-ewallet": {
+        "title": "Overview",
+        "sidebar_label": "Overview"
       },
       "overview-omg-network": {
         "title": "Overview"
@@ -93,6 +125,10 @@
         "title": "Transaction request flow",
         "sidebar_label": "Transaction request flow"
       },
+      "transactions-and-entries": {
+        "title": "Transactions & Entries",
+        "sidebar_label": "Transactions & Entries"
+      },
       "two_factor_authentication": {
         "title": "Two factor authentication",
         "sidebar_label": "Two factor authentication"
@@ -100,6 +136,14 @@
       "upgrade-ewallet-server": {
         "title": "Upgrade eWallet Server",
         "sidebar_label": "Upgrade eWallet Server"
+      },
+      "users": {
+        "title": "Users",
+        "sidebar_label": "Users"
+      },
+      "wallets": {
+        "title": "Wallets",
+        "sidebar_label": "Wallets"
       }
     },
     "links": {
@@ -113,6 +157,7 @@
       "OmiseGO Docs": "OmiseGO Docs",
       "OmiseGO Network": "OmiseGO Network",
       "OmiseGO eWallet Suite": "OmiseGO eWallet Suite",
+      "elixir-omg": "elixir-omg",
       "API Reference": "API Reference"
     }
   },

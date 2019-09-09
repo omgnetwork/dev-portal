@@ -10,25 +10,55 @@
           "overview-omg-network",
           "network-upgrade-guide",
           "send-your-first-transaction",
+          "network-connection-details",
           "introduction-plasma-more-vp",
           "morevp-technical-overview",
           "the-plasma-lifecycle",
           "blockchain-design",
           "blockchain-architecture",
+          "about-the-omisego-block-explorer",
           "omisego-network-resources"
       ],
           
        
       "OmiseGO eWallet Suite": [
-        "install-eWallet-server", 
-        "upgrade-ewallet-server",
-        "integrate-the-eWallet-server",
-        "transaction-request-flow",
-        "advanced_filtering",
-        "two_factor_authentication",
-        "ewallet-configuration-settings",
-        "environment-variables"
+        "overview-ewallet",
+        {
+          "type": "subcategory",
+          "label": "Guides",
+          "ids": [
+            "install-eWallet-server", 
+            "upgrade-ewallet-server",
+            "integrate-the-eWallet-server",
+            "ewallet-configuration-settings",
+            "transaction-request-flow",
+            "advanced_filtering",
+            "two_factor_authentication",
+            "environment-variables"
+          ]
+        },
+        {
+          "type": "subcategory",
+          "label": "Design documentation",
+          "ids": [
+            "ewallet-components",
+            "ewallet-databases",
+            "users",
+            "wallets",
+            "transactions-and-entries",
+            "conventions"
+          ]
+        }
+          
+          
       ],
+
+      "elixir-omg": [
+        "overview-elixir-omg",
+        "starting-the-blockchain-services",
+        "elixir-omg-applications"
+        
+    ],
 
       "API Reference": [
         "api-reference-introduction",

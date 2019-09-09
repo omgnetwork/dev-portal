@@ -26,7 +26,7 @@ The key features of OmiseGO's blockchain design may be viewed as deviations from
 1. Only supports transactions transferring value between addresses.
 
    Value transfer can take the form of an atomic swap; that is two currencies being exchanged in a single transaction (multiple currencies: Eth + ERC20).
-   See also: Transactions
+   See also: [Transactions](blockchain-design#transactions.md)
 
 2. It is a non-p2p, proof-of-authority network. 
 
@@ -51,42 +51,23 @@ Exits are allowed regardless of the state of the PoA child chain. Thus, funds he
 
 Plasma architecture presumes root chain availability.  
 
-## Components
+### Components driving consensus
 
 The following components drive consensus: 
 * Root chain contract
 * Child chain server
 * Watcher
 
-### Root chain contract	
+Each component is discussed in this article.
+
+## Root chain contract
 The root chain contract secures the child chain:
 
 * Holds funds deposited by other addresses (users)
 * Tracks child chain block hashes submitted that account for the funds being moved on the child chain
 * Manages secure exiting of funds, including exits of in-flight transactions
 
-### Child chain server	
-The child chain server creates and submits blocks:
-
-* Collects valid transactions that move funds on the child chain
-* Submits child chain block hashes to the root chain contract
-* Publishes contents of child chain blocks
-
-### Watcher	
-Validates the child chain, ensuring the child chain consensus mechanism is working properly:
-
-* Tracks the root chain contract, published blocks and transactions
-* Reports any breach of consensus
-* As an additional service, collects and stores the account information required to use the child chain.
-* As an additional service, provides a convenience API to access the child chain API and Ethereum. 
-* Protects user by restricting access only to those times the child chain is valid
-
-All cryptographic primitives used (signatures, hashes) are understood to be ones compatible with whatever EVM uses.
-
-
-
-## Root chain contract
-The child chain, and the root chain contract that secures it, manage funds using the UTXO model. See Transactions.
+The child chain, and the root chain contract that secures it, manage funds using the UTXO model. See also, [Transactions](blockchain-design#transactions.md).
 
 ### Deposits
 Any Ethereum address may deposit ETH or ERC20 tokens into the root chain contract. Deposits increase the pool of funds held by the root chain contract, and also signals to the child chain server that the funds should be accessible on the child chain.
@@ -102,7 +83,7 @@ Exits are the most important part of the root chain contract facilities. Exits p
 Exits must satisfy the following conditions:
 | Condition | Description |
 | ---       |   ---       |
-| E1        | Only funds represented by UTXOs that were provably included in the child chain may be exited. See Transactions. This means that only funds that provably existed may be exited. |
+| E1        | Only funds represented by UTXOs that were provably included in the child chain may be exited. See [Transactions](blockchain-design#transactions.md). This means that only funds that provably existed may be exited. |
 | E2        | Attempts to exit funds that have been provably spent on the child chain, must be thwarted and punished. |
 | E3        | There must be a priority given to earlier UTXOs, for the event when the attacking child chain operator submits a block creating UTXOs dishonestly and attempts to exit these UTXOs. This allows all UTXOs created before the dishonest UTXOs, to exit first. |
 | E4        | In-flight funds (funds locked up in a transaction), which may or may not have not been included in the child chain, must be able to exit on par with funds whose inclusion is known. |
@@ -137,7 +118,7 @@ A successful and timely exit challenge invalidates the exit.
 
 May be used by in-flight funds; that is, where the inclusion of the transaction manipulating such funds is not known, or they're included in an invalid chain.
 
-Assuming that the in-flight transaction has inputs that had been outputs of a transaction included in a valid chain, such funds can be recovered using the MoreVP protocol.
+Assuming that the in-flight transaction has inputs that had been outputs of a transaction included in a valid chain, such funds can be recovered using the [MoreVP protocol](morevp-technical-overview.md).
 
 
 
@@ -154,18 +135,19 @@ The table describes scheduled finalization time (SFT) for different types of exi
 | In-flight exits   | exitable_at = max(exit_request_block.timestamp + MFP, youngest_input_block.timestamp + MFP + REP) |
 | Deposits  |   The exit priority for deposits is elevated to protect against malicious operators:   SFT = max(exit_request_block.timestamp + MFP, utxo_submission_block.timestamp + MFP) |
 
-See MoreVP protocol for more information.
+See [MoreVP Technical Overview](morevp-technical-overview.md) for further details.
 
 ***
 
 ##### Configuration parameters for Scheduled Finalization Time (SFT)
 The table describes the configuration parameters for Scheduled Finalization Time (SFT): 
 
-exit_request_block	The root chain block where the exit request is mined.
-utxo_submission_block	The root chain block where the exiting UTXO was created in a child chain block.
-youngest_input_block
+| Parameter | Description |
+|   ---     |   ---     |
+| exit_request_block  | The root chain block where the exit request is mined. |
+| utxo_submission_block | The root chain block where the exiting UTXO was created in a child chain block. |
+| youngest_input_block  | The root chain block where the youngest input of the exiting transaction was created. |
 
-The root chain block where the youngest input of the exiting transaction was created.
 
 ##### Exit waiting period
 All exits must wait at least the Minimum Finalization Period (MFP), to always have the challenge period. 
@@ -196,15 +178,11 @@ There are maximum periods of time a user can spend offline without validating a 
 
 User must validate with the following frequency:
 
-Validate the child chain	
-Every REP
+* Validate the child chain every `REP` to ensure you have enough time to submit an exit request in case chain invalid.
+* Validate exits every `MFP` to challenge invalid regular exits.
+* Validate in-flight exits every `MFP/2` to challenge invalid actions in the in-flight exit protocol.
 
-To ensure you have enough time to submit an exit request in case chain invalid.
-Validate exits
-
-Every MFP	To challenge invalid regular exits.
-Validate in-flight exits	Every MFP/2	To challenge invalid actions in the in-flight exit protocol.
-To cover all possible misbehaviors that may occur in the network, user must validate at rarest every min(REP, MFP/2).
+> To cover all possible misbehaviors that may occur in the network, user must validate at rarest every `min(REP, MFP/2)`.
 
 
 
@@ -265,6 +243,13 @@ OmiseGO blockchain employs these mechanisms to protect itself against reorgs:
 
 ## Child chain server
 
+The child chain server creates and submits blocks:
+
+* Collects valid transactions that move funds on the child chain
+* Submits child chain block hashes to the root chain contract
+* Publishes contents of child chain blocks
+
+
 ### Collecting transactions
 The child chain server collects transactions, and immediately executes valid transactions.
 
@@ -276,7 +261,6 @@ A submitted transaction that exceeds th elimit is queued, and scheduled for incl
 
 
 
-
 ### Submitting and propagating blocks
 The child chain server submits blocks to the root chain contract.
 
@@ -285,7 +269,7 @@ Every T amount of time, the child chain submits a block (in the form of blocks' 
 If the child chain operator withholds a submitted block or if it submits an invalid block - that is, it doesn't share the block contents; then, everyone must exit.
 
 
-### Transaction content
+### Transactions
 A transaction involves spending existing UTXO(s) (inputs), and creating new UTXO(s) (outputs).
 
 A transaction typically specifies the following:
@@ -318,30 +302,30 @@ Child chain will have the following:
       metadata
     ]
 
-* inpPos	
+* **inpPos**	
 
-  Defines input to the transaction. Every inpPos is an output's unique position, derived from:
+  Defines input to the transaction. Every `inpPos` is an output's unique position, derived from:
 
-  ** Child block number
-  ** Transaction index within the block
-  ** Output index
+  * Child block number
+  * Transaction index within the block
+  * Output index
 
   The transaction is valid only when every output for the transaction is unspent.
 
   Value may be zero, when less than 4 inputs are required.
 
 
-* sig	
+* **sig**	
 
   Signature of all other fields in a transaction; RLP-encoded, and hashed.
 
   A transaction must have a non-zero signature per every non-zero input used, under the same indices. Any zero input must have a zero signature (65 zero bytes) delivered.
 
-* newOwner, currency, and amount	
+* **newOwner, currency, and amount**	
 
   A single output, specifying the address of the new owner, for a specified amount of currency.
 
-* metadata	
+* **metadata**	
 
   Optional. Maximum data limit is 32bytes. Requires zero logic, and is included only in the transaction hashes preimage. 
   
@@ -351,6 +335,7 @@ Child chain will have the following:
 
 > To create a valid transaction you must have access to the positions of all the UTXOs that you own.
 
+> **Note:** *Detailed documentation for the transaction encoding scheme used is pending. In the meantime, please refer to the implementation details in the  `elixir-omg` GitHub repo, here, https://github.com/omisego/elixir-omg/blob/master/apps/omg/lib/state/transaction/signed.ex#L35) and here: https://github.com/omisego/elixir-omg/blob/master/apps/omg/lib/omg/state/transaction/signed.ex#L41
 
 
 ### Fees
@@ -365,13 +350,21 @@ The child chain operator is eligible to exit the fees accumulated from the root 
 
 
 ## Watcher
+
+The Watcher validates the child chain, ensuring the child chain consensus mechanism is working properly:
+
+* Tracks the root chain contract, published blocks and transactions
+* Reports any breach of consensus
+* As an additional service, collects and stores the account information required to use the child chain.
+* As an additional service, provides a convenience API to access the child chain API and Ethereum. 
+* Protects user by restricting access only to those times the child chain is valid
+
+All cryptographic primitives used (signatures, hashes) are understood to be ones compatible with whatever EVM uses.
 The Watcher is assumed to be run by the users. Users on the child chain must be able to trust the Watcher. 
 
 The proper functioning of the Watcher is critical to keeping deposited funds secure.
 
 
-
-### Watcher's role
 
 The Watcher performs these tasks:
 
@@ -386,37 +379,33 @@ The Watcher performs these tasks:
 The Watcher checks for the following conditions, which will optionally prompt for an exit challenge:
 
 * Exits during their challenge period referencing UTXOs that have already been spent on the child chain.
-* Invalid actions taken during the in-flight exit game, see MoreVP protocol.
+* Invalid actions taken during the in-flight exit game, see [MoreVP Technical Overview](morevp-technical-overview.md).
 
 As soon as one Watcher detects an invalid child chain, all Watchers trigger a notification to anyone with assets on the child chain to exit immediately.
 
-The Watcher monitors for any of the following conditions, which signals an invalid chain and causes the Watcher to prompt for an exit of funds:
+The Watcher also monitors for any of the following conditions, which signals an invalid chain and causes the Watcher to prompt for an exit of funds:
 
-* Invalid blocks
-* Operator exits more fees than they're due	
-* Unable to validate a submitted child chain block
+1. Invalid blocks
 
+  The following may signal invalid blocks:
 
+  * Transactions spending an input spent in any prior block
+  * Transactions spending exited inputs, if unchallenged or challenge failed or was too late
+  * Transactions with deposits that haven't happened.
+  * Transactions with invalid inputs.
+  * Transactions with invalid signatures.
 
-#### Invalid blocks	
+2. Operator exits more fees than they're due	
 
-The following may signal invalid blocks:
+  The Watcher must ensure that the operator never exits more fees than they're due, because funds covering exited fees come from the same pool as deposited funds. So if the child chain operator exits too much in fees, there may not be enough funds left in the root chain contract for the exit.
 
-* Transactions spending an input spent in any prior block
-* Transactions spending exited inputs, if unchallenged or challenge failed or was too late
-* Transactions with deposits that haven't happened.
-* Transactions with invalid inputs.
-* Transactions with invalid signatures.
+3. Unable to validate a submitted child chain block
 
+  The Watcher needs information to validate a child chain block that's been submitted to the root chain. If it can't acquire the information or it takes too long to get this information, this will trigger a funds exit prompt.
 
-#### Operator exits more fees than they're due	
+4. Invalid claim on root chain contract left unchallenged for too long risks security on fund on child chain
 
-The Watcher must ensure that the operator never exits more fees than they're due, because funds covering exited fees come from the same pool as deposited funds. So if the child chain operator exits too much in fees, there may not be enough funds left in the root chain contract for the exit.
-
-
-
-#### Unable to validate a submitted child chain block
-The Watcher needs information to validate a child chain block that's been submitted to the root chain. If it can't acquire the information or it takes too long to get this information, this will trigger a funds exit prompt.
+  Any invalid claim done on the root chain contract (e.g. an invalid exit), that goes without challenge for too long and becomes a risk to the security of the funds held on the child chain.
 
 
 

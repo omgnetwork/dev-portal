@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'OmiseGO', // Title for your website.
   tagline: 'Developer documentation for OmiseGO - Unstoppable financial infrastructure',
   url: 'https://developer.omisego.co/', // Your website URL 
-  baseUrl: '/docs/', // Base URL for your project */
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -60,8 +60,9 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: "#2e374c",
-    secondaryColor: '#215cec',
+    // primaryColor: "#2e374c",
+    primaryColor: "#215cec",
+    secondaryColor: '#2e374c',
     
     
   

@@ -6,4 +6,3 @@ sidebar_label: title
 
 
 
-type here
