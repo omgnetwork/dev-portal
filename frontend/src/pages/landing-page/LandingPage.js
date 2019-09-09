@@ -158,7 +158,7 @@ const LandingPage = () => {
           </span>
           <span>
             <Typography center color='text'>
-              {`Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety gaurantees`}
+              {`Leverage Plasma architecture to build a L2 Application with\nhigh throughputs and strong safety guarantees`}
             </Typography>
           </span>
           <span>
