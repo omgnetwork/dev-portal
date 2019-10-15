@@ -16,7 +16,7 @@ If you haven't already, make sure you have gone through the first Guide on [Runn
 
 ### Note
 
-This guide is meant for **samrong** and any v0.1 instance of OMG Network
+This guide is meant for **Samrong** and any v0.1 instance of OMG Network
 
 ### Managing Complex UTXOs
 
