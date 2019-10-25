@@ -2,7 +2,7 @@
 
 Estimate reading time: 5 minutes
 
-**Overview**
+## Overview
 
 This guide introduces you to the Plasma interface, and shows you how to make Plasma transactions directly from your browser, using DAI as ERC20 token.
 
@@ -10,7 +10,7 @@ You will learn first-hand how to use ERC20 interactions with Plasma to make a `d
 
 **Important**! This guide is intended for Samrong, and for any v0.2 instance of the OmiseGO Network.
 
-**Before you start**
+## Before you start
 
 Ensure you have the following installed:
 - node-js >10.0.0
@@ -19,7 +19,7 @@ Ensure you have the following installed:
   - A code editor
   - A browser with a web3 wallet, such as MetaMask
 
-#### Getting started
+## Getting started
 This section explains what you'll need to do to set up your environment.
 
 1. Clone the latest version of `js-starter-kit` onto your local machine. You can find the repo here: https://github.com/omisego/js-starter-kit
@@ -115,11 +115,11 @@ Perform these steps:
 
 4.Finally, you're going to exit:
 
-  4.1 Click Exit.
+  4.1 Click **Exit**.
 
   4.2 Select the DAI UTXO that you wish to exit.
 
-  4.3 Click Okay.
+  4.3 Click **Okay**.
 
 Congratulations, you have completed an end-to-end process of making DAI transactions on the OmiseGO Network!
 
