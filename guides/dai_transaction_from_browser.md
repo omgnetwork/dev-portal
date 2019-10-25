@@ -1,65 +1,131 @@
-# Transacting DAI on OmiseGO Network through the browser
+# Using a browser for DAI transactions on the OmiseGO Network
 
-Estimated time: 5 minutes
+Estimate reading time: 5 minutes
 
-Goal:
+**Overview**
 
-- To understand plasma transactions with ERC20 token using DAI
-- To get first hand experience in making ERC20 interactions with plasma
-- To learn the process of making `deposit`, `transact` and `exit` with ERC20
+This guide introduces you to the Plasma interface, and shows you how to make Plasma transactions directly from your browser, using DAI as ERC20 token.
 
-In this guide, we will introduce to you the Plasma Interface by making transactions directly from your browser. Just make sure you have the following installed:
-1. node-js >10.0.0
-2. npm > 6.0.0
+You will learn first-hand how to use ERC20 interactions with Plasma to make a `deposit`, `transfer`, and `exit`.
 
-Have access to a code editor, browser with a web3 wallet like MetaMask
+**Important**! This guide is intended for Samrong, and for any v0.2 instance of the OmiseGO Network.
 
-### Note
+**Before you start**
 
-This guide is meant for **Samrong** and any v0.2 instance of OMG Network
+Ensure you have the following installed:
+- node-js >10.0.0
+- npm > 6.0.0
+- You will also need access to the following:
+  - A code editor
+  - A browser with a web3 wallet, such as MetaMask
 
-### Initial Setup
-1. Clone the latest version of `js-starter-kit` onto your local machine. The repo can be found here https://github.com/omisego/js-starter-kit
+#### Getting started
+This section explains what you'll need to do to set up your environment.
 
-2. Open up the `config.js` on your text editor
+1. Clone the latest version of `js-starter-kit` onto your local machine. You can find the repo here: https://github.com/omisego/js-starter-kit
 
-3. Replace the current configs in `config.js` with the  [following Network Endpoints for Samrong](https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md) then save the file.
+2. In a text editor, open up the following file: `config.js`
 
-4. install all the dependencies `npm install`
+3. In `config.js`, replace the current configuration with the network endpoints for Samrong; then, save your changes.
+You'll find the network endpoints for Samrong in this file: https://github.com/omisego/dev-portal/blob/master/guides/network_endpoints.md
 
-5. start the app up by running `npm run dev`
+4. Run `npm install` to install the dependencies.
 
-#### 1. Funding the wallet with DAI
+5. Run `npm run dev` to start the app.
 
-1.1. the clientside wallet will rely on the funds you have on your existing account. In order to run the JS-Starter-kit, make sure you have sent yourself some Rinkeby Testnet DAI. We will use that later to make ERC20 transactions. DAI ERC20 contract can be found here: 
+### Transact with DAI on the OmiseGO Network
 
+An end-to-end process of making DAI transactions on the OmiseGO Network involves the following:
+
+1. Fund your wallet with DAI.
+2. Deposit DAI.
+3. Transfer DAI.
+4. Exit the DAI UTXO
+
+#### Fund your wallet with DAI
+
+The client-side wallet relies on the funds you have on your existing account.
+
+Before you can start transacting on the OmiseGO Network, you'll need to fund your wallet with some Rinkeby Testnet DAI.
+
+You'll need DAI for the following:
+
+- To run the JS-Starter-kit
+- To make ERC20 transactions
+You can find DAI ERC20 contract here:
 https://rinkeby.etherscan.io/address/0xb307901ac0a807402a99879a491836697fec5e62
 
-#### 2. Deposit DAI
+#### Deposit, transfer, and exit
 
-2.1. Before you can deposit any ERC20 token, you must first approve amount you would like to deposit. Click on the DEPOSIT button, put down the DAI token contract address, choose the amount you would like to deposit in DAI. Click on the check box approve ERC20 token before deposit []. Click OK. There should be a metamask popup, click on Confirm.
+This section explains how you can deposit ERC20 tokens to update your child chain balance, transfer DAI tokens to a recipient, and exit the DAI UTXO.
+
+Perform these steps:
+
+1.Before depositing any ERC20 token, you'll need to first approve the amount:
+
+  1.1 Click **Deposit**.
+  
+  1.2 Enter the DAI token contract address.
+  
+  1.3 Choose the amount you would like to deposit, in DAI.
+  
+  1.4 Select the checkbox to approve the ERC20 token before deposit; then, click **Okay**.
+  
+  1.5 On the MetaMask popup, click **Confirm**. The transaction is confirmed.
 
 ![deposit_approval](./assets/deposit-approval.png)  
 
-2.2 After the transactions have been confirmed, you are free to make the deposit. Once again, click on the DEPOSIT button, put down the DAI token contract address, choose the amount you would like to deposit in DAI. This time, leave the approve box unchecked. Click OK. There should be another metamask popup to verify that you would like to deposit ERC20 token, click on Confirm.
+2.Once the transactions are confirmed, you can make the deposit:
 
-2.3. You can refresh balance via the [refresh] button. After a while, your balance childchain balance will be updated with the new DAI amount, note that the balance is in lowest denomination of the ERC20 token (18 digits for DAI)
+  2.1 Click **Deposit**.
+
+  2.3 Enter the DAI token contract address.
+
+  2.4 Select the amount you wish to deposit, in DAI.
+
+  2.5 Leave the Approve checkbox unchecked, and click 
+  **Okay**.
+
+  2.6 On the MetaMask popup, click **Confirm** to verify the ERC20 deposit.
+
+  2.7 Click **Refresh** to update the balance. The child chain balance updates with the new DAI amount.
+
+  **Note**: _Balance refresh may take a few minutes. The balance displays in the lowest denomination of the ERC20 token (18 digits for DAI)._
 
 ![dai-balance](./assets/dai_balance.png)
 
-### 3. Transfer DAI
+3.Now you're going to transfer DAI:
 
-3.1. Click on the TRANSFER button. Choose DAI as the token to transfer. Fill in the amount you would like to transfer, including the address of the recipient- this can be another wallet you own on MetaMask. Click Okay and there should be a popup that shows the message you are trying to sign- here you can inspect the inputs and outputs of your transactions. After making sure this is accurate, click Confirm.
+  3.1 Click **Transfer**.
+
+  3.2 Select **DAI** as the token you wish to transfer.
+
+  3.3 Fill out the amount you wish to transfer.
+
+  3.4 Specify the recipient address; then, click **Okay**.
+  **Note**: _This can be another wallet you own on MetaMask._
+
+  3.4 On the system message that displays to confirm your signing attempt, inspect the inputs and outputs of your transactions.
+
+  3.5 Once you have verified that the transaction details are accurate, click **Confirm**.
 
 ![metamask transfer popup](./assets/metamask-transfer.png)
 
-3.2. To see the status of your transaction. You could also open up your browser console and retrieve the TX hash, by searching for the hash through [Plasma Block Explorer](http://quest.samrong.omg.network) you should see the details of the transaction.
+  3.6 To view the status of your transaction, open the browser console to retrieve the TX hash; then, search for the hash through Plasma Block Explorer, where you can also view the transaction details.
 
-#### 4. Exit
+4.Finally, you're going to exit:
 
-4.1. Once you are done, simply click on the EXIT button and select the DAI UTXO that you would like to exit and click on Okay.
+  4.1 Click Exit.
 
-Congratulations, you have now gone through the end-to-end process of making DAI transactions on the OmiseGO Network.
+  4.2 Select the DAI UTXO that you wish to exit.
+
+  4.3 Click Okay.
+
+Congratulations, you have completed an end-to-end process of making DAI transactions on the OmiseGO Network!
+
+
+
+
 
 
 
