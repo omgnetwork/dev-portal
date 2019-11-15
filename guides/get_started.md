@@ -20,4 +20,3 @@
 
 - [OMG-JS Docs](https://github.com/omisego/omg-js)
 
-- [Plasma CLI Docs](https://github.com/omisego/plasma-cli)

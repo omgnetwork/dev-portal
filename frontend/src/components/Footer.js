@@ -1,8 +1,8 @@
+import Link from 'components/Link';
+import Typography from 'components/Typography';
 import React from 'react';
 import styled from 'styled-components';
 
-import Link from 'components/Link';
-import Typography from 'components/Typography';
 
 const XFooter = styled.div`
   display: flex;
@@ -77,13 +77,13 @@ const Footer = () => {
               </Typography>
             </Link>
           </span>
-          <span className='footer-item'>
+          {/* <span className='footer-item'>
             <Link href='https://github.com/omisego/dev-portal/blob/master/guides/plasma_utxo_from_terminal.md'>
               <Typography color='footerText' size='S'>
                 {`Making sense of UTXOs`}
               </Typography>
             </Link>
-          </span>
+          </span> */}
         </div>
 
         <div className='footer-column'>
@@ -132,13 +132,6 @@ const Footer = () => {
             <Link href='https://github.com/omisego/omg-js/blob/master/README.md'>
               <Typography color='footerText' size='S'>
                 {`omg-js`}
-              </Typography>
-            </Link>
-          </span>
-          <span className='footer-item'>
-            <Link href='https://github.com/omisego/plasma-cli/blob/master/README.md'>
-              <Typography color='footerText' size='S'>
-                {`Plasma CLI`}
               </Typography>
             </Link>
           </span>

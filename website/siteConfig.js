@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'welcome', label: 'Docs'},
+    { doc: 'welcome', label: 'Docs' },
     { href: 'https://developer.omisego.co/elixir-omg/', external: true, label: 'API' },
     { href: 'http://quest.samrong.omg.network/', external: true, label: 'Block explorer' },
     { href: 'https://omisego.co/use-cases', external: true, label: 'Use cases' },
@@ -46,9 +46,9 @@ const siteConfig = {
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},
     { href: 'https://omisego.co/', external: true, label: 'Product' },
-    
+
   ],
-  
+
   // If you have users set above, you add it here:
   users,
 
@@ -62,12 +62,12 @@ const siteConfig = {
     /* primaryColor: '#96205b', */
     // primaryColor: "#444",
     primaryColor: "#2e374c",
-    
-   /* secondaryColor: '#69163f', */
+
+    /* secondaryColor: '#69163f', */
     // secondaryColor: '#2176ff',
     secondaryColor: '#215cec',
-    
-  
+
+
   },
 
   _fonts: {
@@ -80,12 +80,12 @@ const siteConfig = {
       "system-ui"
     ]
   },
- get fonts() {
-   return this._fonts;
- },
- set fonts(value) {
-   this._fonts = value;
- },
+  get fonts() {
+    return this._fonts;
+  },
+  set fonts(value) {
+    this._fonts = value;
+  },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} OmiseGO`,
