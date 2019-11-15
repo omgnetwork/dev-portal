@@ -93,21 +93,21 @@ const Footer = () => {
             </Typography>
           </span>
           <span className='footer-item'>
-            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/informational_api_specs.yaml'>
+            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/informational_api_specs.yaml'>
               <Typography color='footerText' size='S'>
                 {`Watcher\nInformational API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/security_critical_api_specs.yaml'>
+            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/security_critical_api_specs.yaml'>
               <Typography color='footerText' size='S'>
                 {`Watcher\nSecurity Critical API`}
               </Typography>
             </Link>
           </span>
           <span className='footer-item'>
-            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/operator_api_specs.yaml'>
+            <Link href='https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/operator_api_specs.yaml'>
               <Typography color='footerText' size='S'>
                 {`Childchain API`}
               </Typography>

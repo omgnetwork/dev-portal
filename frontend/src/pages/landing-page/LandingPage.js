@@ -156,8 +156,8 @@ const LandingPage = () => {
             </Typography>
           </span>
           <span>
-            <Button href="https://github.com/omisego/dev-portal/tree/master/guides/get_started.md">
-              Try it out
+            <Button href="https://gist.github.com/kasima/0be903b91bdbe9032d15cb66ca70c867">
+              Learn More
             </Button>
           </span>
         </XCTA>
@@ -218,7 +218,7 @@ const LandingPage = () => {
               title="Watcher Informational API"
               subTitle={'API for common interactions:\n balance query, making transactions'}
               action={{
-                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/informational_api_specs.yaml',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/informational_api_specs.yaml',
                 text: 'Learn more'
               }}
             />
@@ -227,7 +227,7 @@ const LandingPage = () => {
               title="Watcher Security Critical API"
               subTitle={'Plasma exit operations API'}
               action={{
-                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/security_critical_api_specs.yaml',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/security_critical_api_specs.yaml',
                 text: 'Learn more'
               }}
             />
@@ -236,7 +236,7 @@ const LandingPage = () => {
               title="Childchain API"
               subTitle={'Get block data to implement your own watcher'}
               action={{
-                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/operator_api_specs.yaml',
+                href: 'https://developer.omisego.co/elixir-omg/docs-ui/?url=0.3/operator_api_specs.yaml',
                 text: 'Learn more'
               }}
             />
