@@ -1,10 +1,10 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-
-import Status from './Status';
-import Hamburger from './Hamburger';
 import Dropdown from './Dropdown';
+import Hamburger from './Hamburger';
 import Link from './Link';
+import Status from './Status';
+
 
 const XHeader = styled.div`
   display: flex;
@@ -68,7 +68,7 @@ const XHeader = styled.div`
 const menuItems = [
   {
     title: 'Block Explorer',
-    href: 'http://quest.samrong.omg.network'
+    href: 'https://quest-pre-lumphini.omg.network/'
   },
   {
     title: 'API Specification',
@@ -81,7 +81,7 @@ const menuItems = [
 ]
 
 const Header = ({ showStatus }) => {
-  const [ isOpen, setIsOpen ] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const hamburgerClick = () => {
     setIsOpen(!isOpen);
@@ -106,7 +106,7 @@ const Header = ({ showStatus }) => {
 
         <div className='header-mobile'>
           <Hamburger isOpen={isOpen} hamburgerClick={hamburgerClick} />
-          <Dropdown isOpen={isOpen} hamburgerClick={hamburgerClick} menuItems={menuItems}/>
+          <Dropdown isOpen={isOpen} hamburgerClick={hamburgerClick} menuItems={menuItems} />
         </div>
 
         {showStatus && (
