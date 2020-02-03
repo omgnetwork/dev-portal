@@ -63,17 +63,27 @@ JS-starter-kit works with [Rinkeby Testnet](https://www.rinkeby.io), so make sur
 
 ## Working with Wallet
 
-### 1. Funding the wallet on the Root chain
+### 1. Funding
 
-1.1. the clientside wallet will rely on the funds you have on your existing account. In order to run the JS-Starter-kit, make sure you have sent yourself some Rinkeby Testnet ETH. We will use that later to make transactions.
+1.1. The client side wallet will rely on the funds you have on your existing account. In order to run the JS-Starter-kit, make sure you have sent yourself some Rinkeby Testnet ETH. We will use that later to make transactions.
 
-1.2 click the refresh button, you should see the Rinkeby ETH that you own in your account
+You can get some on [the official faucet service](https://faucet.rinkeby.io). The process is as simple, as creation of tweet or facebook post with your ETH address. You can later remove the post and still keep the coins.
+
+![](https://i.imgur.com/9f1AYTj.png)
+
+1.2 Click the refresh button, you should see the Rinkeby ETH that you own in your account.
 
 ### 2. Deposit
 
-2.1. Click on the DEPOSIT button, choose the amount you would like to deposit in Wei. Click okay. There should be a pop up to confirm your transaction. Click confirm.
+2.1. Click on the DEPOSIT button, choose the amount you would like to deposit in Wei. Click okay.
 
-2.2. Here you will have to wait for about 2-3 minutes depending on the network congestion. You can refresh balance via the [refresh] button. After a while, your balance will be updated
+![](https://i.imgur.com/mMbsida.png)
+
+There should be a pop up to confirm your transaction. Click confirm.
+
+![](https://i.imgur.com/pZwFshc.png)
+
+2.2. Here you will have to wait for about 2-3 minutes depending on the network congestion. You can refresh balance via the `refresh` button. After a while, your balance will be updated.
 
 ### 3. Transact
 
