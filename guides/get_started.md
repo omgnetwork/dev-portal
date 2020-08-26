@@ -12,7 +12,7 @@
 
 - [Watcher Security Critical API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/security_critical_api_specs.yaml)
 
-- [Childchain API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.1/operator_api_swagger.json)
+- [Childchain API](https://developer.omisego.co/elixir-omg/docs-ui/?url=0.2/operator_api_specs.yaml)
 
 ### Documentation
 
